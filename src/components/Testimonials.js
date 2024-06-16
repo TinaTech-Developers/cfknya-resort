@@ -10,8 +10,8 @@ function Testimonials() {
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
   return (
-    <div className="bg-scroll bg-[url('/banner.jpg')] object-cover h-[340px] mt-14">
-      <div className="bg-scroll bg-black bg-opacity-70 h-[340px] py-10">
+    <div className="bg-scroll bg-[url('/banner.jpg')] object-cover md:h-[340px] mt-14">
+      <div className="bg-scroll bg-black bg-opacity-70 md:h-[340px] py-10">
         <Swiper
           centeredSlides={true}
           // slidesPerView={2}

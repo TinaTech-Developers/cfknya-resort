@@ -14,10 +14,10 @@ function Services() {
       >
         <div className="flex items-center justify-center gap-2 my-4">
           <div className="w-10 h-1 bg-orange-900"></div>
-          <h1 className="text-lg  uppercase">our services</h1>
+          <h1 className="text-lg   uppercase">our services</h1>
           <div className="w-10 h-1 bg-orange-900"></div>
         </div>
-        <h>Explore Our SERVICES</h>
+        <h className="text-lgs">Explore Our SERVICES</h>
       </motion.div>
       <div className="flex flex-wrap items-center justify- mx-auto">
         <ServiceCard />
