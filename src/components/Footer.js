@@ -5,7 +5,7 @@ import { SlArrowRight } from "react-icons/sl";
 function Footer() {
   return (
     <div>
-      <div className=" hidden md:grid grid-cols-1  w-56 h-full md:w-[800px] md:h-56 bg-gray-400 mx-auto translate-y-36 shadow-2xl">
+      <div className=" hidden md:grid grid-cols-1  w-56 h-full md:w-[800px] md:h-56 bg-[#000818] mx-auto translate-y-36 shadow-2xl">
         <div>
           <h1 className="capitalize text-lg text-amber-900 p-4">
             You need a laxurious room
@@ -33,7 +33,7 @@ function Footer() {
           /> */}
         </div>
       </div>
-      <div className="h-full grid grid-cols-1 md:grid-cols-3 md:w-full bg-gray-500 md:h-96 ">
+      <div className="h-full grid grid-cols-1 md:grid-cols-3 md:w-full bg-[#000818] md:h-96 ">
         <div className=" flex flex-col items-center justify-center p-4 text-gray-500 pt-12">
           <h1 className="text-xl text-amber-950 font-bold py-2">
             CFK NYA RESORTS

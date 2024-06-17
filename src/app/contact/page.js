@@ -2,14 +2,16 @@ import Inquiry from "@/components/Inquiry";
 import Layout from "@/components/Layout";
 import SubHero from "@/components/SubHero";
 import React from "react";
+import Contact from "./_components/Contact";
 
-function Contact() {
+function page() {
   return (
     <Layout>
       <SubHero head={"Contact us"} />
       <Inquiry />
+      <Contact />
     </Layout>
   );
 }
 
-export default Contact;
+export default page;
