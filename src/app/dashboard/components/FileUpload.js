@@ -1,11 +1,10 @@
 "use client";
 import React, { useRef, useState } from "react";
-import FillButton from "@/app/components/FillButton";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { MdEdit, MdOutlineDeleteForever } from "react-icons/md";
-import { UploadDropzone, Uploader } from "../../../lib/uploadthing";
+import { UploadDropzone, Uploader } from "../../../app/lib/uploadthing";
 import { FileText, Pencil, Plus } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";

@@ -1,12 +1,13 @@
 import React, { useState, useRef } from "react";
-import FillButton from "@/app/components/FillButton";
+
 import "react-toastify/dist/ReactToastify.css";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { UploadDropzone, Uploader } from "../../../lib/uploadthing";
+import { UploadDropzone, Uploader } from "../../../app/lib/uploadthing";
 import { FileText, Pencil, Plus } from "lucide-react";
+import FillButton from "@/components/FillButton";
 
 function RoomUpload() {
   const [name, setName] = useState("");
