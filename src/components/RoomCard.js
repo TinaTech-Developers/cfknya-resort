@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import Modal from "./Modal";
 
-export default function RoomCard() {
+export default function RoomCard({ room }) {
   const [modalOpen, setModalOpen] = useState(false);
-  const [book, setBook] = useState("");
+  const [book, setBook] = useState(room.name);
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
   const [address, setAddress] = useState("");
@@ -19,12 +19,61 @@ export default function RoomCard() {
   const [deptdate, setDeptdate] = useState("");
   const [adultsNo, setAdultsNo] = useState("");
   const [kidsNo, setKidsNo] = useState("");
-  const [price, setPrice] = useState("");
+  const [price, setPrice] = useState(room.price);
   let [total, setTotal] = useState("");
-
   const handleBook = async (e) => {
     e.preventDefault();
+    e.preventDefault();
+    if (
+      !name ||
+      !surname ||
+      !address ||
+      !country ||
+      !email ||
+      !arrivaldate ||
+      !deptdate ||
+      !kidsNo ||
+      !adultsNo ||
+      !book
+    ) {
+      alert("Fill all fields");
+      return;
+    }
+    try {
+      const res = await fetch("/api/reservations", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          surname,
+          address,
+          country,
+          email,
+          arrivaldate,
+          deptdate,
+          kidsNo,
+          adultsNo,
+          book,
+          price,
+          total,
+        }),
+      });
+      if (res.ok) {
+        onClick();
+      }
+    } catch (error) {
+      console.log("Error ");
+    }
+    const onClick = () => {
+      toast("Your Booking Was Successful, We will respond to your email", {
+        type: "success",
+        position: toast.POSITION.TOP_CENTER,
+      });
+    };
   };
+
   return (
     <motion.div
       initial={{
@@ -46,17 +95,17 @@ export default function RoomCard() {
       className="flex flex-col w-80 h-full shadow-2xl md:w-96 border  bg-transparent rounded-lg my-5 mx-auto text-gray-600 p-5 "
     >
       <Image
-        src={"/img_6.jpg"}
+        src={`/${room.image}`}
         height={300}
         width={400}
         alt=""
         className="w-80 md:w-96 h-52 object-cover"
       />
       <p className="p-2 bg-orange-950 w-[7rem] text-center text-white -translate-y-6">
-        $100/Night
+        ${room.pricel}/Night
       </p>
       <div className="flex items-center justify-between">
-        <h1 className="font-semibold text-xl">Junior Suite</h1>{" "}
+        <h1 className="font-semibold text-xl">{room.name}</h1>{" "}
         <div className="flex items-center justify-center gap-1">
           <FaStar />
           <FaStar />
@@ -76,10 +125,7 @@ export default function RoomCard() {
           <FaWifi />2 Free WiFi
         </div>
       </div>
-      <p className="pb-4">
-        A beautiful but minimalistic nest. With its sleek modern theme you get
-        the best of both worlds. Business on the inside, nature on the outside.
-      </p>
+      <p className="pb-4">{room.description}</p>
       <div className="flex items-center justify-between">
         <button
           onClick={() => setModalOpen(true)}

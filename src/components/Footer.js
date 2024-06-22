@@ -81,7 +81,7 @@ function Footer() {
       </div>
       <div className="flex items-center justify-center w-full h-10 bg-gray-900">
         <p className="text-white text-sm">
-          Copyright 2023 by <Link href={""}>TinaTech Solutions</Link>
+          Copyright 2023 by <Link href={""}>TinaSoft Nexus</Link>
         </p>
       </div>
     </div>
