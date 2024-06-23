@@ -51,14 +51,14 @@ function RoomUpload() {
 
   return (
     <div className="grid md:flex gap-10 mx-4 mt-10 pb-20">
-      <div className="border border-gray-500 mt-5 pb-14 w-[50%] h-[22rem] bg-blue-200 p-10">
-        <div className="col-span-full  ">
+      <div className="border border-gray-500 mt-5 pb-14 w-[50%] h-[22rem]  bg-blue-200 p-10">
+        <div className="col-span-full h-[22rem]">
           <div className="flex justify-between items-center mb-4  ">
             <label
               htmlFor="course-image"
-              className=" text-xs font-medium text-gray-900"
+              className=" text-sm font-medium text-gray-900"
             >
-              <h1 className="px-auto"> Project Image</h1>
+              <h1 className="px-auto"> Room Image</h1>
             </label>
             {imageUrl && (
               <button
@@ -77,7 +77,7 @@ function RoomUpload() {
               alt="Product image"
               width={1000}
               height={667}
-              className="w-full h-56 object-cover"
+              className="w-full h-64 object-cover"
             />
           ) : (
             <UploadDropzone
@@ -93,6 +93,7 @@ function RoomUpload() {
               onUploadError={(error) => {
                 alert(`ERROR! ${error.message}`);
               }}
+              className="h-[15rem] "
             />
           )}
         </div>
