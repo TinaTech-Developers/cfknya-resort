@@ -1,47 +1,47 @@
-import User from "../../../../../models/user";
-import connectMongoDB from "../../../../../libs/mongodb";
-import { NextRequest, NextResponse } from "next/server";
-import bcryptjs from "bcryptjs";
+// import User from "../../../../../models/user";
+// import connectMongoDB from "../../../../../libs/mongodb";
+// import { NextRequest, NextResponse } from "next/server";
+// import bcryptjs from "bcryptjs";
 
-connect();
+// connect();
 
-export async function POST(request) {
-  try {
-    const reqBody = await request.json();
-    const { username, email, password } = reqBody;
+// export async function POST(request) {
+//   try {
+//     const reqBody = await request.json();
+//     const { username, email, password } = reqBody;
 
-    // check if exists
-    const user = await User.findOne({ email });
+//     // check if exists
+//     const user = await User.findOne({ email });
 
-    if (user) {
-      return NextResponse.json(
-        {
-          error: "User already exists",
-        },
-        { status: 400 }
-      );
-    }
+//     if (user) {
+//       return NextResponse.json(
+//         {
+//           error: "User already exists",
+//         },
+//         { status: 400 }
+//       );
+//     }
 
-    // hash password
-    const salt = await bcryptjs.genSalt(10);
-    const hashedPassword = await bcryptjs.hash(password, salt);
+//     // hash password
+//     const salt = await bcryptjs.genSalt(10);
+//     const hashedPassword = await bcryptjs.hash(password, salt);
 
-    const newUser = new User({
-      username,
-      password,
-      email: hashedPassword,
-    });
+//     const newUser = new User({
+//       username,
+//       password,
+//       email: hashedPassword,
+//     });
 
-    const savedUser = await newUser.save();
+//     const savedUser = await newUser.save();
 
-    console.log(savedUser);
+//     console.log(savedUser);
 
-    return NextResponse.json({
-      message: "User created successfully ",
-      success: true,
-      savedUser,
-    });
-  } catch (error) {
-    return NextResponse.json({ error }, { status: 500 });
-  }
-}
+//     return NextResponse.json({
+//       message: "User created successfully ",
+//       success: true,
+//       savedUser,
+//     });
+//   } catch (error) {
+//     return NextResponse.json({ error }, { status: 500 });
+//   }
+// }
