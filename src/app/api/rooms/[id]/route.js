@@ -15,9 +15,19 @@ export async function PUT(request, { params }) {
   return NextResponse.json({ message: "Topic updated" }, { status: 200 });
 }
 
+// export async function GET(request, { params }) {
+//   const { id } = params;
+//   await connectMongoDB();
+//   const room = await Rooms.findOne({ _id: id });
+//   return NextResponse.json({ room }, { status: 200 });
+// }
+
 export async function GET(request, { params }) {
   const { id } = params;
   await connectMongoDB();
   const room = await Rooms.findOne({ _id: id });
+  if (!room) {
+    return NextResponse.json({ error: "Room not found" }, { status: 404 });
+  }
   return NextResponse.json({ room }, { status: 200 });
 }

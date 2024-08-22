@@ -47,7 +47,7 @@ function Testimonials() {
                       Tinashe P
                     </cite>
                     <cite className="ps-3 text-sm text-white">
-                      Developer at Compulink
+                      Software Developer
                     </cite>
                   </div>
                 </figcaption>

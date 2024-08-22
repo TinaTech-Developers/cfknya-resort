@@ -5,6 +5,7 @@ import { MdBathtub } from "react-icons/md";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Modal from "./Modal";
+import Link from "next/link";
 
 export default function RoomCard({ room }) {
   const [modalOpen, setModalOpen] = useState(false);
@@ -95,14 +96,14 @@ export default function RoomCard({ room }) {
       className="flex flex-col w-80 h-full shadow-2xl md:w-96 border  bg-transparent rounded-lg my-5 mx-auto text-gray-600 p-5 "
     >
       <Image
-        src={`/${room.image}`}
+        src={room.imageUrl}
         height={300}
         width={400}
         alt=""
         className="w-80 md:w-96 h-52 object-cover"
       />
       <p className="p-2 bg-orange-950 w-[7rem] text-center text-white -translate-y-6">
-        ${room.pricel}/Night
+        ${room.price}/Night
       </p>
       <div className="flex items-center justify-between">
         <h1 className="font-semibold text-xl">{room.name}</h1>{" "}
@@ -122,7 +123,7 @@ export default function RoomCard({ room }) {
           <MdBathtub /> 2 Bath
         </div>
         <div className="flex items-center justify-center gap-1">
-          <FaWifi />2 Free WiFi
+          <FaWifi /> Free WiFi
         </div>
       </div>
       <p className="pb-4">{room.description}</p>
@@ -292,7 +293,13 @@ export default function RoomCard({ room }) {
           </form>
         </Modal>
 
-        <button className="p-2 text-white bg-orange-950">View Details</button>
+        <Link
+          key={room._id}
+          href={`/rooms/${room._id}`}
+          className="p-2 text-white bg-orange-950"
+        >
+          View Details
+        </Link>
       </div>
     </motion.div>
   );
