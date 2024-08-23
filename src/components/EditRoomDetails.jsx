@@ -31,7 +31,7 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
   let [total, setTotal] = useState("");
 
   return (
-    <div className="mt-28 m-10">
+    <div className="mt-28 m-5">
       <div>
         <h1 className="text-2xl md:text-3xl font-semibold">Laxury Room</h1>
         <p className="flex items-center gap-5 text-gray-600">
