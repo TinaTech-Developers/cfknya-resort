@@ -126,7 +126,7 @@ export default function RoomCard({ room }) {
           <FaWifi /> Free WiFi
         </div>
       </div>
-      <p className="pb-4">{room.description}</p>
+      <p className="pb-4 truncate">{room.description}</p>
       <div className="flex items-center justify-between">
         <button
           onClick={() => setModalOpen(true)}

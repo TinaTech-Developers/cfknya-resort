@@ -1,12 +1,15 @@
 import React from "react";
 import Link from "next/link";
 import { SlArrowRight } from "react-icons/sl";
+import { FaSquareWhatsapp, FaXTwitter } from "react-icons/fa6";
+import { IoLogoFacebook } from "react-icons/io";
+import { FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
     <div>
       <div className="h-full grid grid-cols-1 md:grid-cols-3 md:w-full bg-[#000818] md:h-96 ">
-        <div className=" flex flex-col items-center justify-center p-4 text-gray-500 ">
+        <div className=" flex flex-col items-center  p-4 text-gray-500 ">
           <h1 className=" text-amber-950 font-bold pt-2">Head Office</h1>
           <p className="text-sm text-white">+ 263 77 224 1125</p>
           <p className="text-sm text-white">+ 263 77 224 1125</p>
@@ -25,7 +28,7 @@ function Footer() {
           <p className="text-sm text-white">+ 263 77 224 1125</p>
           <div></div>
         </div>
-        <div className="flex flex-col items-start px-32 justify-center top-0 text-white ">
+        <div className="flex flex-col items-start px-32 justify mt-5 text-white ">
           <h1 className="text-white text-xl font-semibold p-2">Explore us!</h1>
           <div className="flex items-center justify-between gap-1">
             <SlArrowRight color="brown" size={"0.8rem"} />
@@ -48,14 +51,28 @@ function Footer() {
             <Link href={""}>Contact Us</Link>
           </div>
         </div>
-        <div className="flex flex-col items-center text-white top-0">
-          <p className="px-10 py-2">
-            Get the best updates via email. Dont miss it. Any time you may{" "}
+        <div className="flex flex-col items-center text-white mt-5 px-5">
+          <h1 className="text-white text-xl font-semibold p-2">Follow us</h1>
+          <p>
+            Or just keep up to date with what is happening on any of our social
+            pages
           </p>
-          <input className="w-[70%] p-2 bg-white" placeholder="Your email" />
-          <button className="bg-amber-950 w-[70%] p-2 my-2">
-            Subscribe Now!
-          </button>
+          <div className="flex items-start justify-between gap-2 mt-2">
+            <Link href={""}>
+              <FaSquareWhatsapp size={25} color="green" />
+            </Link>
+            <Link href={""}>
+              <IoLogoFacebook size={25} color="blue" />
+            </Link>
+            <Link href={""}>
+              <FaLinkedin size={25} color="blue" />
+            </Link>
+            <Link href={""}>
+              <FaXTwitter size={25} color="white" />
+            </Link>
+          </div>
+          {/* <p>Mobile: +263 71 247 1209 | +263 77 305 9753</p>*/}
+          {/* <p>Email: info@tinasoftnexus.co.zw</p> */}
         </div>
       </div>
       <div className="flex items-center justify-center w-full h-10 bg-gray-900">

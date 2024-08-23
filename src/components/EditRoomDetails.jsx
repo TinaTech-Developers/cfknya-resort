@@ -9,6 +9,8 @@ import {
   MdLocationSearching,
 } from "react-icons/md";
 import FillButton from "./FillButton";
+import { ArrowBigLeft } from "lucide-react";
+import Link from "next/link";
 
 function EditRoomDetails({ id, name, price, imageUrl, description }) {
   const [newName, setNewName] = useState(name);
@@ -32,13 +34,23 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
 
   return (
     <div className="mt-28 m-5">
-      <div>
-        <h1 className="text-2xl md:text-3xl font-semibold">Laxury Room</h1>
-        <p className="flex items-center gap-5 text-gray-600">
-          <MdLocationSearching size={28} color="red" />
-          Inyanga, Zimbabwe
-        </p>
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-2xl md:text-3xl font-semibold">Laxury Room</h1>
+          <p className="flex items-center gap-5 text-gray-600">
+            <MdLocationSearching size={28} color="red" />
+            Inyanga, Zimbabwe
+          </p>
+        </div>
+        <Link
+          href={"/rooms"}
+          className="flex items-center justify-center gap-1 border px-3 py-2 bg-green-900 text-white"
+        >
+          <ArrowBigLeft />
+          Back
+        </Link>
       </div>
+      <hr className="w-[100%] px-4 mx-auto my-4" />
       <div className="grid grid-cols-1 md:grid-cols-5 mt-5">
         <div className="col-span-1 md:col-span-3">
           <Image
@@ -46,9 +58,17 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
             alt="room image"
             height={400}
             width={400}
-            className="h-[30rem] w-full object-cover"
+            className="h-[24rem] w-full object-cover"
           />
-          <div className="bg-black h-28 w-full"></div>
+          <div className="bg-black h-44 w-full -mt-2">
+            <Image
+              src={imageUrl}
+              alt=""
+              height={200}
+              width={200}
+              className="h-44 w-44 object-cover p-2 mt-2"
+            />
+          </div>
           <div className="border p-5 ">
             <h1 className="text-2xl font-semibold capitalize">
               Room description
@@ -73,8 +93,14 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
           </div>
         </div>
         <div className="flex flex-col justify- items-center gap-4 mt-10 md:mt-0 col-span-2 h-full w-full md:mx-5 border mx-auto p-5">
-          <h1 className="text-5xl font-bold mt-4">LOGO.</h1>
-          <h1 className="text-xl ">CFK-NYA Resort</h1>
+          <Image
+            src={"/logo.jpeg"}
+            alt="Novu Resort"
+            height={100}
+            width={200}
+            className="h-44 w-44 object-cover"
+          />
+
           <FillButton name={"Whatsapp Us"} link={""} onClick={""} />
 
           <p className="text-green-600 text-start">
