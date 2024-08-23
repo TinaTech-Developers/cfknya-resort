@@ -3,16 +3,20 @@ import Layout from "@/components/Layout";
 import { error } from "console";
 import React from "react";
 
+const API_BASE_URL =
+  process.env.API_BASE_URL ||
+  "http://localhost:3000" ||
+  "www.cfknyaresort.co.zw";
 const getRoomById = async (id) => {
   try {
-    const res = await fetch(`http://localhost:3000/api/rooms/${id}`, {
+    const res = await fetch(`${API_BASE_URL}/api/rooms/${id}`, {
       cache: "no-store",
     });
     if (!res.ok) {
       throw new error("failed to fetch a room");
     }
     const room = res.json();
-    console.log(room);
+    // console.log(room);
     return room;
   } catch (error) {
     console.log(error);
