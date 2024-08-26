@@ -10,7 +10,7 @@ function Todo() {
   return (
     <Layout>
       <SubHero head={"ToDo & Gallery"} />
-      <Inquiry />
+
       <div className="flex flex-col items-center justify-center mt-14">
         <motion.div
           initial={{ y: 100, opacity: 0 }}

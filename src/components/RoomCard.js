@@ -1,4 +1,4 @@
-"use clint";
+"use client";
 import Image from "next/image";
 import { FaBed, FaStar, FaWifi } from "react-icons/fa";
 import { MdBathtub } from "react-icons/md";
@@ -89,7 +89,7 @@ export default function RoomCard({ room }) {
       }}
       whileHover={{
         // scale: 1.1,
-        backgroundColor: "#00001C",
+        backgroundColor: "#06402B",
         color: "white",
       }}
       transition={{ duration: 0.9 }}
@@ -102,7 +102,7 @@ export default function RoomCard({ room }) {
         alt=""
         className="w-80 md:w-96 h-52 object-cover"
       />
-      <p className="p-2 bg-orange-950 w-[7rem] text-center text-white -translate-y-6">
+      <p className="p-2 bg-green-900 w-[7rem] text-center text-white -translate-y-6">
         ${room.price}/Night
       </p>
       <div className="flex items-center justify-between">
@@ -130,7 +130,7 @@ export default function RoomCard({ room }) {
       <div className="flex items-center justify-between">
         <button
           onClick={() => setModalOpen(true)}
-          className="p-2 text-white bg-blue-950"
+          className="p-2 text-white bg-orange-700"
         >
           Book Now
         </button>
@@ -296,7 +296,7 @@ export default function RoomCard({ room }) {
         <Link
           key={room._id}
           href={`/rooms/${room._id}`}
-          className="p-2 text-white bg-orange-950"
+          className="p-2 text-white bg-green-900"
         >
           View Details
         </Link>

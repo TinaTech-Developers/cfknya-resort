@@ -9,7 +9,7 @@ function page() {
   return (
     <Layout>
       <SubHero head={"About Us"} />
-      <Inquiry />
+
       <About />
       <Staff />
     </Layout>

@@ -1,13 +1,14 @@
 import Image from "next/image";
 import React from "react";
+import FillButton from "./FillButton";
 
 function Discover() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 md:mt-20">
-      <div className="col-span-1 text-white p-10 bg-blue-950">
+      <div className="col-span-1 text-white p-10 bg-[#06402B]">
         <div className="flex items-center  gap-2 my-4">
-          <h1 className="text-lg  uppercase">our rooms</h1>
-          <div className="w-10 h-1 bg-orange-900"></div>
+          <h1 className="text-lg  uppercase text-amber-700">our rooms</h1>
+          <div className="w-10 h-1 bg-orange-700"></div>
         </div>
         <p className="text-3xl font-bold">Discover A Brand Luxurious Hotel</p>
         <p className="my-10">
@@ -16,8 +17,7 @@ function Discover() {
           lorem sit clita duo justo magna dolore erat amet
         </p>
         <div className="flex items-center justify-between">
-          <button className="p-2 text-white bg-blue-800">Book Now</button>
-          <button className="p-2 text-white bg-orange-950">View Details</button>
+          <FillButton name={"View More!"} link={"/rooms"} onClick={""} />
         </div>
       </div>
       <div className="col-span-1">

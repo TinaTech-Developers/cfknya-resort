@@ -14,11 +14,13 @@ function About() {
           className="flex flex-col  gap-2 my-4"
         >
           <div className="flex items-center gap-2 my-4">
-            <h1 className="text-xl uppercase">luxury living</h1>
-            <div className="w-10 h-1 bg-orange-900"></div>
+            <h1 className="text-xl uppercase text-amber-700">luxury living</h1>
+            <div className="w-10 h-1 bg-amber-700"></div>
           </div>
 
-          <h1 className="text-2xl md:text-4xl font-bold">Stay and Enjoy</h1>
+          <h1 className="text-2xl md:text-4xl font-bold text-green-950">
+            Stay and Enjoy
+          </h1>
         </motion.div>
         <motion.div
           initial={{ y: 100, opacity: 0 }}
@@ -53,7 +55,7 @@ function About() {
             </div>
           </div>
           <div className="flex items-center justify-center">
-            <button className="p-2 bg-orange-950 text-white uppercase px-4 mt-4 ">
+            <button className="p-2 bg-amber-700 text-white uppercase px-4 mt-4 ">
               explore more
             </button>
           </div>

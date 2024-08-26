@@ -8,7 +8,7 @@ function page() {
   return (
     <Layout>
       <SubHero head={"Contact us"} />
-      <Inquiry />
+
       <Contact />
     </Layout>
   );

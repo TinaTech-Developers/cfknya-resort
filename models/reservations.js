@@ -2,7 +2,7 @@ import mongoose, { Schema } from "mongoose";
 
 const reservationSchema = new Schema(
   {
-    name: String,
+    fullNme: String,
     surname: String,
     address: String,
     country: String,

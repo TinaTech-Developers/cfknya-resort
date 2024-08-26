@@ -13,11 +13,11 @@ function Gallery() {
         className="text-4xl font-bold"
       >
         <div className="flex items-center justify-center gap-2 my-4">
-          <div className="w-10 h-1 bg-orange-900"></div>
-          <h1 className="text-lg  uppercase">our gallery</h1>
-          <div className="w-10 h-1 bg-orange-900"></div>
+          <div className="w-10 h-1 bg-amber-700"></div>
+          <h1 className="text-lg  uppercase text-amber-700">our gallery</h1>
+          <div className="w-10 h-1 bg-amber-700"></div>
         </div>
-        <h className="mx-auto ">Explore Our GALLERY</h>
+        <h className="mx-auto text-green-950 ">Explore Our GALLERY</h>
       </motion.div>
       <div className="flex flex-wrap items-center justify-center gap-5 mt-10">
         <GalleryCard image={"/img_14.jpg"} />{" "}

@@ -13,11 +13,11 @@ function Services() {
         className="text-4xl font-bold"
       >
         <div className="flex items-center justify-center gap-2 my-4">
-          <div className="w-10 h-1 bg-orange-900"></div>
-          <h1 className="text-lg   uppercase">our services</h1>
-          <div className="w-10 h-1 bg-orange-900"></div>
+          <div className="w-10 h-1 bg-amber-700"></div>
+          <h1 className="text-lg   uppercase text-amber-700">our services</h1>
+          <div className="w-10 h-1 bg-amber-700"></div>
         </div>
-        <h className="text-lgs">Explore Our SERVICES</h>
+        <h className=" text-green-950">Explore Our SERVICES</h>
       </motion.div>
       <div className="flex flex-wrap items-center justify- mx-auto">
         <ServiceCard />
@@ -40,7 +40,7 @@ function ServiceCard() {
       }}
       whileHover={{
         // scale: 1.1,
-        backgroundColor: "#00001C",
+        backgroundColor: "#06402B",
         color: "white",
       }}
       transition={{ duration: 0.9 }}

@@ -4,7 +4,7 @@ import Reservations from "../../../../models/reservations";
 
 export async function POST(request) {
   const {
-    name,
+    fullName,
     surname,
     address,
     country,
@@ -19,7 +19,7 @@ export async function POST(request) {
   } = await request.json();
   await connectMongoDB();
   await Reservations.create({
-    name,
+    fullName,
     surname,
     address,
     country,

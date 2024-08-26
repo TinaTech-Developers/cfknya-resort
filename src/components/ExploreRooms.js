@@ -46,14 +46,14 @@ function ExploreRooms({ heading }) {
         className="text-4xl font-bold"
       >
         <div className="flex items-center justify-center gap-2 my-4">
-          <div className="w-10 h-1 bg-orange-900"></div>
-          <h1 className="text-lg  uppercase">our rooms</h1>
-          <div className="w-10 h-1 bg-orange-900"></div>
+          <div className="w-10 h-1 bg-amber-700"></div>
+          <h1 className="text-lg  uppercase text-amber-700">our rooms</h1>
+          <div className="w-10 h-1 bg-amber-700"></div>
         </div>
         {/* <div>
           <span className="w-10 h-56 bg-orange-900"></span>
         </div> */}
-        <h>{heading}</h>
+        <h className="text-green-950">{heading}</h>
       </motion.div>
       <div className="flex flex-wrap items-center justify- mx-auto">
         {rooms.map((room) => (
