@@ -1,13 +1,14 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaBed, FaWifi } from "react-icons/fa";
 import { MdBathtub, MdLocationSearching } from "react-icons/md";
 import FillButton from "./FillButton";
 import { ArrowBigLeft } from "lucide-react";
 import Link from "next/link";
-import { ToastContainer } from "react-toastify";
-
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function EditRoomDetails({ id, name, price, imageUrl, description }) {
   const API_BASE_URL =
     process.env.API_BASE_URL ||
@@ -26,20 +27,21 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
   const [city, setCity] = useState("");
   const [country, setCountry] = useState("");
   const [email, setEmail] = useState("");
-  const [arrivaldate, setArrivaldate] = useState("");
-  const [deptdate, setDeptdate] = useState("");
+  const [arrivaldate, setArrivaldate] = useState();
+  const [deptdate, setDeptdate] = useState();
   const [adultsNo, setAdultsNo] = useState("");
   const [kidsNo, setKidsNo] = useState("");
-  // const [price, setPrice] = useState(price);
-  let [total, setTotal] = useState(price * adultsNo);
+  const [difference, setDifference] = useState(null);
+  let [total, setTotal] = useState("");
 
   const handleBook = async (e) => {
     e.preventDefault();
-    e.preventDefault();
+
     if (
       !fullName ||
       !surname ||
       !address ||
+      !city ||
       !country ||
       !email ||
       !arrivaldate ||
@@ -48,7 +50,8 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
       !adultsNo ||
       !book
     ) {
-      alert("Fill all fields");
+      // alert("Fill all fields");
+      toast.error("Fill all fields");
       return;
     }
     try {
@@ -61,6 +64,7 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
           fullName,
           surname,
           address,
+          city,
           country,
           email,
           arrivaldate,
@@ -73,7 +77,10 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
         }),
       });
       if (res.ok) {
-        onClick();
+        toast.success(
+          "Your Booking Was Successful, We will respond to your email"
+        );
+        calculateDifference();
       }
     } catch (error) {
       console.log("Error ");
@@ -85,6 +92,20 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
       });
     };
   };
+
+  useEffect(() => {
+    if (arrivaldate && deptdate) {
+      const d1 = new Date(arrivaldate);
+      const d2 = new Date(deptdate);
+      const diffTime = Math.abs(d2 - d1);
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      setDifference(diffDays);
+    } else {
+      setDifference(null); // Reset difference if dates are not valid
+    }
+  }, [arrivaldate, deptdate]); // Dependency array to run effect when dates change
+
+  console.log(difference);
 
   return (
     <div className="mt-28 m-5">
@@ -292,7 +313,17 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
                 </div>
               </div>
             </div>
+
+            {difference !== null && (
+              <p className="font-semibold">US${difference * price}</p>
+            )}
+            <p className="font-semibold">
+              US${(total = difference * price)} per {difference} Days
+            </p>
+            <input value={total} onChange={(e) => setTotal(e.target.value)} />
+
             <button
+              onClick={handleBook}
               type="submit"
               className=" border relative py-2 px-6  bg-transparent text-gray-700 transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-orange-700 before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100"
             >

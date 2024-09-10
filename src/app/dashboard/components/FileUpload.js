@@ -55,18 +55,18 @@ export default function FileUpload() {
   return (
     <div>
       <h1 className="text-xl font-semibold px-14 pt-10">
-        Add New Project To Gallery
+        Add New Image to Gallery
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 px-4 mx-10 ">
         <div className="flex justify-center items-center mx-auto">
-          <div className="border border-gray-500 -mt-[60px] pb-14 w-96 h-[26rem] bg-blue-50 p-10">
-            <div className="col-span-full  ">
+          <div className="border border-gray-500 mt-5 pb-14 w-[50%] h-[22rem]  bg-blue-200 p-10">
+            <div className="col-span-full h-[22rem]">
               <div className="flex justify-between items-center mb-4  ">
                 <label
                   htmlFor="course-image"
                   className=" text-sm font-medium text-gray-900"
                 >
-                  <h1 className="px-auto"> Gallery Image</h1>
+                  <h1 className="px-auto"> Image</h1>
                 </label>
                 {imageUrl && (
                   <button
@@ -101,6 +101,7 @@ export default function FileUpload() {
                   onUploadError={(error) => {
                     alert(`ERROR! ${error.message}`);
                   }}
+                  className="h-[15rem] "
                 />
               )}
             </div>

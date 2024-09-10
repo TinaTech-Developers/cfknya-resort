@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import FileUpload from "./FileUpload";
 import RoomUpload from "./RoomUpload";
+import Expenditure from "./Expenditure";
 
 function MiniHeader() {
   const [toggle, setToggle] = useState(1);
@@ -33,7 +34,7 @@ function MiniHeader() {
           href={""}
           className="text-sm hover:bg-white "
         >
-          Profile Settings
+          Expenditure
         </Link>
         <Link
           onClick={() => updateToggle(4)}
@@ -51,11 +52,9 @@ function MiniHeader() {
           <RoomUpload />
         </div>
         <div className={toggle == 3 ? "block" : "hidden"}>
-          <h1>Profile Settings</h1>
+          <Expenditure />
         </div>
-        <div className={toggle == 4 ? "block" : "hidden"}>
-          <h1>User Settings</h1>
-        </div>
+        <div className={toggle == 4 ? "block" : "hidden"}></div>
       </div>
     </div>
   );
