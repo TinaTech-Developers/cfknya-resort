@@ -50,10 +50,10 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
       !adultsNo ||
       !book
     ) {
-      // alert("Fill all fields");
       toast.error("Fill all fields");
       return;
     }
+
     try {
       const res = await fetch(`${API_BASE_URL}/api/reservations`, {
         method: "POST",
@@ -76,21 +76,19 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
           total,
         }),
       });
+
       if (res.ok) {
         toast.success(
           "Your Booking Was Successful, We will respond to your email"
         );
         calculateDifference();
+      } else {
+        const { message } = await res.json();
+        toast.error(message);
       }
     } catch (error) {
-      console.log("Error ");
+      console.log("Error ", error);
     }
-    const onClick = () => {
-      toast("Your Booking Was Successful, We will respond to your email", {
-        type: "success",
-        position: toast.POSITION.TOP_CENTER,
-      });
-    };
   };
 
   useEffect(() => {
@@ -163,6 +161,52 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
                 <div className="flex items-center justify-start gap-1">
                   <FaWifi /> Free WiFi
                 </div>
+              </div>
+            </div>
+            <hr className="my-4" />
+
+            <div className="text-sm">
+              <h1 className="my-4 font-bold">Notes</h1>
+              <div className="text-sm">
+                <h2 className="font-semibold">Inclusions</h2>
+                <p className="text-xs">
+                  {
+                    "  Accommodation 2-bedroom apartment comprising of master bedroom ensuite, a twin bedroom (2 single beds) and a convertible sofa couch in the lounge to house a total of six people. ** DSTV (TV in lounge and Master bedroom) and WiFi, common bathroom with shower, generator for lights, TV, fridge & booster pump (it does not power equipment with elements). A braai area for each apartment, valuables safe and well-equipped kitchen with gas stove and oven, microwave, toaster, crockery, cutlery, glassware, pots & pans etc. Electric blanket in Master bedroom when cold. Car cleaning and housekeeping services available. Additional bed available on request at cost."
+                  }
+                </p>
+              </div>
+
+              <div className="mt-4">
+                <h2 className="font-semibold">Checking In and Checking Out:</h2>
+                <li className="text-xs">
+                  {
+                    " Check-in time is from 1400hrs until 2000hrs (unless with prior arrangements). Guests are required to present payment upon check-in along with a valid form of identification"
+                  }
+                </li>
+                <li className="text-xs">
+                  {
+                    "Check-out is strictly at 10am. (Late checkout will attract a fee of $30 per hour). "
+                  }
+                </li>
+              </div>
+              <div className="mt-4">
+                <h2 className="font-semibold">Terms and Conditions </h2>
+                <li className="text-xs">
+                  {" Smoking is prohibited in all rooms and the Lapa."}
+                </li>
+                <li className="text-xs">
+                  {"No loud music or shouting allowed within the premises."}
+                </li>
+                <li className="text-xs">
+                  {
+                    " No phone calls / loud social media video streams. (Please respect other guests) "
+                  }
+                </li>
+                <li className="text-xs">
+                  {
+                    "Switch off all lights, TV and air conditioners (where available) when exiting rooms"
+                  }
+                </li>
               </div>
             </div>
           </div>
@@ -267,7 +311,7 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
                   <input
                     value={arrivaldate}
                     onChange={(e) => setArrivaldate(e.target.value)}
-                    type="date"
+                    type="datetime-local"
                     name="arrivaldate"
                     className="input input-bordered w-full"
                   />
@@ -279,7 +323,7 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
                   <input
                     value={deptdate}
                     onChange={(e) => setDeptdate(e.target.value)}
-                    type="date"
+                    type="datetime-local"
                     name="deptdate"
                     className="input input-bordered w-full"
                   />

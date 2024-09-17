@@ -18,7 +18,30 @@ export async function POST(request) {
     price,
     total,
   } = await request.json();
+
   await connectMongoDB();
+
+  // Check for overlapping reservations
+  const existingReservations = await Reservations.find({
+    book: book,
+    $or: [
+      { arrivaldate: { $lte: deptdate }, deptdate: { $gte: arrivaldate } },
+      { arrivaldate: { $gte: arrivaldate }, deptdate: { $lte: deptdate } },
+    ],
+  });
+
+  if (existingReservations.length > 0) {
+    return NextResponse.json(
+      {
+        message: `This room is booked from ${arrivaldate} to ${deptdate}. You may book dates after this period if you are flexible.
+
+`,
+      },
+      { status: 400 }
+    );
+  }
+
+  // Create new reservation
   await Reservations.create({
     fullName,
     surname,
