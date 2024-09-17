@@ -10,10 +10,10 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 function EditRoomDetails({ id, name, price, imageUrl, description }) {
-  const API_BASE_URL =
-    process.env.API_BASE_URL ||
-    "http://localhost:3000" ||
-    "www.cfknyaresort.co.zw";
+  // const API_BASE_URL =
+  //   process.env.API_BASE_URL ||
+  //   "http://localhost:3000" ||
+  //   "www.cfknyaresort.co.zw";
 
   // const [newName, setNewName] = useState(name);
   const [newPrice, setNewPrice] = useState(price);
@@ -55,7 +55,7 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
     }
 
     try {
-      const res = await fetch(`${API_BASE_URL}/api/reservations`, {
+      const res = await fetch("/api/reservations", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
