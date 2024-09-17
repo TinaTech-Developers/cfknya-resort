@@ -10,22 +10,13 @@ function Footer() {
     <div>
       <div className="h-full grid grid-cols-1 md:grid-cols-3 md:w-full bg-gray-700 md:h-96 ">
         <div className=" flex flex-col items-center  p-4 text-gray-500 ">
-          <h1 className=" text-amber-950 font-bold pt-2">Head Office</h1>
-          <p className="text-sm text-white">+ 263 77 224 1125</p>
-          <p className="text-sm text-white">+ 263 77 224 1125</p>
-          <p className="text-sm text-white">+ 263 77 224 1125</p>
           <h1 className=" text-amber-950 font-bold pt-2">
             Reservations Inyanga
           </h1>
-          <p className="text-sm text-white">+ 263 77 224 1125</p>
-          <p className="text-sm text-white">+ 263 77 224 1125</p>
-          <p className="text-sm text-white">+ 263 77 224 1125</p>
-          <h1 className=" text-amber-950 font-bold pt-2">
-            Reservations Zimbabwe
-          </h1>
-          <p className="text-sm text-white">+ 263 77 224 1125</p>
-          <p className="text-sm text-white">+ 263 77 224 1125</p>
-          <p className="text-sm text-white">+ 263 77 224 1125</p>
+          <p className="text-sm text-white">+263 77 224 1125 </p>
+          <p className="text-sm text-white">+263 77 214 6008</p>
+          <p className="text-sm text-white">+263 71 221 4219</p>
+
           <div></div>
         </div>
         <div className="flex flex-col items-start px-32 justify mt-5 text-white ">

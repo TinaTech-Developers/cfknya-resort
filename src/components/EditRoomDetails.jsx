@@ -53,6 +53,10 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
       toast.error("Fill all fields");
       return;
     }
+    if (kidsNo + adultsNo > 6) {
+      toast.error("Our Apartments only accomodate 6 people or less");
+      return;
+    }
 
     try {
       const res = await fetch("/api/reservations", {
