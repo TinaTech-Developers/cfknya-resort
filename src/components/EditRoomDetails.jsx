@@ -34,6 +34,20 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
   const [difference, setDifference] = useState(null);
   let [total, setTotal] = useState("");
 
+  const reset = async () => {
+    setFullName("");
+    setSurname("");
+    setAddress("");
+    setCity("");
+    setCountry("");
+    setEmail("");
+    setArrivaldate("");
+    setDeptdate("");
+    setAdultsNo("");
+    setKidsNo("");
+    setDifference(null);
+    setTotal("");
+  };
   const handleBook = async (e) => {
     e.preventDefault();
 
@@ -53,7 +67,7 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
       toast.error("Fill all fields");
       return;
     }
-    if (kidsNo + adultsNo > 6) {
+    if (Number(kidsNo) + Number(adultsNo) > 6) {
       toast.error("Our Apartments only accomodate 6 people or less");
       return;
     }
@@ -85,6 +99,7 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
         toast.success(
           "Your Booking Was Successful, We will respond to your email"
         );
+        reset();
         calculateDifference();
       } else {
         const { message } = await res.json();
