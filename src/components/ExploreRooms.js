@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import RoomCard from "./RoomCard";
-import toast from "react-toastify";
 
 function getDate() {
   const today = new Date();

@@ -44,20 +44,27 @@ function ServiceCard() {
         color: "white",
       }}
       transition={{ duration: 0.9 }}
-      className="flex flex-col w-80 h-96 shadow-2xl md:w-96 border rounded-lg my-5 mx-auto text-gray-600 p-5 "
+      className="grid md:flex w-[50%] h-full md:h-96 shadow-2xl  border rounded-lg my-5 mx-auto text-gray-600 p-5 "
     >
-      <div className="w-24 h-24 border mx-auto mt-10">
-        <div className="w-20 h-20 border mx-auto my-2 items-center justify-center">
-          <PiBuildingApartmentDuotone size={50} className="mx-auto my-4" />{" "}
+      <div className="flex flex-col items-center justify-center  m-4">
+        <div className="w-40 h-24 border mx-auto mt-10">
+          <div className="w-20 h-20 border mx-auto my-2 items-center justify-center">
+            <PiBuildingApartmentDuotone size={50} className="mx-auto my-4" />{" "}
+          </div>
         </div>
+        <h1 className="font-semibold text-center py-6 text-xl">
+          Rooms & Appartment
+        </h1>
       </div>
-      <h1 className="font-semibold text-center py-6 text-xl">
-        Rooms & Appartment
-      </h1>
-      <p className="text-center">
-        Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam
-        amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit
-        clita duo justo magna dolore erat amet
+      <p className="flex items-center justify-center text-start p-4 ">
+        At Novu Resort, we offer a range of elegantly designed rooms and
+        apartments that combine comfort and style. Our cozy rooms feature modern
+        amenities, plush bedding, and stunning views, while our spacious
+        apartments come with fully equipped kitchens and separate living areas,
+        making them ideal for families or groups. With private balconies in many
+        accommodations, guests can unwind and enjoy the breathtaking scenery.
+        Whether you’re here for a romantic getaway or a family vacation, Novu
+        Resort promises a relaxing and memorable stay in a beautiful setting.
       </p>
     </motion.div>
   );

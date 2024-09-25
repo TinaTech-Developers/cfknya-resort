@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import Adventure from "@/components/Adventure";
 import Discover from "@/components/Discover";
 import ExploreRooms from "@/components/ExploreRooms";
 import Footer from "@/components/Footer";
@@ -14,8 +15,10 @@ export default function Home() {
       <Layout>
         <Hero />
         <About />
-        <ExploreRooms heading={"Explore Our ROOMS"} />
+        <Adventure />
         <Discover />
+        <ExploreRooms heading={"Explore Our ROOMS"} />
+
         <Services />
         <Testimonials />
         <Gallery />
