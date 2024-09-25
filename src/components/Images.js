@@ -10,7 +10,7 @@ const Images = ({ image, heading, description, link }) => {
           alt=""
           height={400}
           width={500}
-          className="w-[100%] h-full object-cover "
+          className="w-[100%] h-[27rem] object-cover "
         />
 
         <Link
