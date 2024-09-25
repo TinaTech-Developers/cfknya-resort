@@ -23,7 +23,9 @@ function Adventure() {
         <h className="text-green-950">Exciting Journey</h>
       </motion.div>
       <Video
-        video={"/nyanga.mp4"}
+        video={
+          "https://utfs.io/f/M8crfG3am8lfL9D9rm9uKAaL1TB6NQhjD0kumYc2sR5vVnlz"
+        }
         heading={"Discover the Beauty of Nyanga, Zimbabwes"}
         link={"/"}
         description={
