@@ -37,7 +37,7 @@ function Testimonials() {
                 <blockquote>
                   <p className="text-2xl italic font-medium text-gray-900 dark:text-white bg-white p-4 rounded-lg m-4">
                     {
-                      "I had a great experience working with Compulink Systems. They were professional, knowledgeable, and very responsive to my needs. I would highly recommend them to anyone looking for reliable and efficient ICT services."
+                      "Staying at this resort was an absolute dream! The staff were incredibly welcoming, the amenities were top-notch, and the scenery was breathtaking. I left feeling relaxed and rejuvenated. Can't wait to come back!"
                     }
                   </p>
                 </blockquote>
@@ -69,7 +69,7 @@ function Testimonials() {
                 <blockquote>
                   <p className="text-2xl italic font-medium text-gray-900 dark:text-white bg-white p-4 rounded-lg m-4">
                     {
-                      "Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."
+                      "Our stay at the resort was unforgettable! The beautiful views, luxurious accommodations, and attentive service made for the perfect getaway. We truly felt pampered and will definitely be returning!"
                     }
                   </p>
                 </blockquote>
@@ -77,10 +77,10 @@ function Testimonials() {
                   {/* <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gouch.png" alt="profile picture"> */}
                   <div className="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-500 dark:divide-gray-700">
                     <cite className="pe-3 font-medium text-gray-300">
-                      Panashe Gorejena
+                      Newman Mujeyi
                     </cite>
                     <cite className="ps-3 text-sm text-white">
-                      Procurement Manager
+                      Data Analyst
                     </cite>
                   </div>
                 </figcaption>

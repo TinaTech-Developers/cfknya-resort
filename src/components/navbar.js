@@ -7,7 +7,7 @@ function Navbar() {
   let links = [
     { name: "Home", link: "/" },
     { name: "Rooms", link: "/rooms" },
-    { name: "To-Do", link: "/todo" },
+    { name: "Activities", link: "/todo" },
     { name: "About", link: "/about" },
     { name: "Contact ", link: "/contact" },
   ];

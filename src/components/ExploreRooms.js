@@ -36,7 +36,7 @@ function ExploreRooms({ heading }) {
       >
         <div className="flex items-center justify-center gap-2 my-4">
           <div className="w-10 h-1 bg-amber-700"></div>
-          <h1 className="text-lg uppercase text-amber-700">our rooms</h1>
+          <h1 className="text-lg uppercase text-amber-700">our apartments</h1>
           <div className="w-10 h-1 bg-amber-700"></div>
         </div>
         <h className="text-green-950">{heading}</h>

@@ -9,6 +9,17 @@ import Link from "next/link";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+
 function EditRoomDetails({ id, name, price, imageUrl, description }) {
   // const API_BASE_URL =
   //   process.env.API_BASE_URL ||
@@ -145,13 +156,55 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
       <hr className="w-[100%] px-4 mx-auto my-4" />
       <div className="grid grid-cols-1 md:grid-cols-5 mt-5">
         <div className="col-span-1 md:col-span-3 border">
-          <Image
-            src={imageUrl}
-            alt="room image"
-            height={400}
-            width={400}
-            className="h-[24rem] w-full object-cover"
-          />
+          <Swiper
+            // install Swiper modules
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            spaceBetween={50}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log("slide change")}
+          >
+            <SwiperSlide>
+              <Image
+                src={imageUrl}
+                alt="room image"
+                height={400}
+                width={400}
+                className="h-[30rem] w-full object-cover"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src={imageUrl}
+                alt="room image"
+                height={400}
+                width={400}
+                className="h-[30rem] w-full object-cover"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src={imageUrl}
+                alt="room image"
+                height={400}
+                width={400}
+                className="h-[30rem] w-full object-cover"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <Image
+                src={imageUrl}
+                alt="room image"
+                height={400}
+                width={400}
+                className="h-[30rem] w-full object-cover"
+              />
+            </SwiperSlide>
+          </Swiper>
+
           <div className="bg-black h-44 w-full -mt-2">
             <Image
               src={imageUrl}

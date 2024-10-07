@@ -31,11 +31,37 @@ export async function POST(request) {
   });
 
   if (existingReservations.length > 0) {
+    const arrivalDateFormatted = new Date(arrivaldate).toLocaleDateString(
+      "en-GB",
+      {
+        weekday: "short",
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+      }
+    );
+    const deptDateFormatted = new Date(deptdate).toLocaleDateString("en-GB", {
+      weekday: "short",
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    });
+
+    // Add one day to deptdate
+    const nextAvailableDate = new Date(new Date(deptdate).getTime() + 86400000);
+    const nextAvailableDateFormatted = nextAvailableDate.toLocaleDateString(
+      "en-GB",
+      {
+        weekday: "short",
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+      }
+    );
+
     return NextResponse.json(
       {
-        message: `This room is booked from ${arrivaldate} to ${deptdate}. You may book dates after this period if you are flexible.
-
-`,
+        message: `This room is booked from ${arrivalDateFormatted} to ${deptDateFormatted}. You may book from ${nextAvailableDateFormatted} onward if you are flexible.`,
       },
       { status: 400 }
     );

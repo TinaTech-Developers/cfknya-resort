@@ -128,12 +128,12 @@ export default function RoomCard({ room }) {
       </div>
       <p className="pb-4 truncate">{room.description}</p>
       <div className="flex items-center justify-between">
-        <button
+        {/* <button
           onClick={() => setModalOpen(true)}
           className="p-2 text-white bg-orange-700"
         >
           Book Now
-        </button>
+        </button> */}
         <Modal modalOpen={modalOpen} setModalOpen={setModalOpen}>
           <form onSubmit={handleBook} className="">
             <h3 className="font-bold text-lg text-center py-2">

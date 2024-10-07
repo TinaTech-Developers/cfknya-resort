@@ -4,7 +4,7 @@ import SubHero from "@/components/SubHero";
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Inquiry from "@/components/Inquiry";
+import Adventure from "@/components/Adventure";
 
 function Todo() {
   return (
@@ -28,7 +28,7 @@ function Todo() {
         <div className="flex flex-wrap items-center justify-center gap-5 mt-10">
           <ToDOCard
             image={"/img_8.jpg"}
-            title={"QUAD BIKING"}
+            title={"Quad Biking"}
             desc={
               "Feed your thirst to ride the unknown trails or just having a calm ride with your loved ones and share a motor moment."
             }
@@ -42,7 +42,7 @@ function Todo() {
           />
           <ToDOCard
             image={"/img_7.jpg"}
-            title={"HIKING"}
+            title={"Hiking"}
             desc={
               "Explore the trails to bring out the Adam and Eve inside. See nature for what it is, the scenery is amazing."
             }
@@ -69,6 +69,7 @@ function Todo() {
             }
           />
         </div>
+        <Adventure />
       </div>
     </Layout>
   );
@@ -103,8 +104,8 @@ function ToDOCard({ image, title, desc }) {
           width={500}
         />
         <h1 className="uppercase text-gray-400">ACTIVITIES</h1>
-        <hr className=" border-x-4 border-amber-950 w-10 mt-2" />
-        <h2 className="text-amber-900 text-2xl">{title}</h2>
+        <hr className=" border-x-4 border-green-950 w-10 mt-2" />
+        <h2 className="text-green-900 text-2xl">{title}</h2>
         <p className="text-start py-2 text-gray-500">{desc}</p>
         {/* <FillButton name={"READ MORE"} link={"/reservation"} /> */}
       </div>

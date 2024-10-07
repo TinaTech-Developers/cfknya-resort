@@ -27,7 +27,7 @@ function Adventure() {
           "https://utfs.io/f/M8crfG3am8lfL9D9rm9uKAaL1TB6NQhjD0kumYc2sR5vVnlz"
         }
         heading={"Discover the Beauty of Nyanga, Zimbabwes"}
-        link={"/"}
+        link={"/trees"}
         description={
           "Nyanga, located in the Eastern Highlands of Zimbabwe, is a breathtaking destination known for its stunning landscapes, lush forests, and rich cultural heritage. Here’s a brief overview of what makes Nyanga a must-visit travel spot."
         }

@@ -17,7 +17,7 @@ export default function Home() {
         <About />
         <Adventure />
         <Discover />
-        <ExploreRooms heading={"Explore Our ROOMS"} />
+        <ExploreRooms heading={"Explore Our Apartments"} />
 
         <Services />
         <Testimonials />

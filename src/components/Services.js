@@ -44,7 +44,7 @@ function ServiceCard() {
         color: "white",
       }}
       transition={{ duration: 0.9 }}
-      className="grid md:flex w-[50%] h-full md:h-96 shadow-2xl  border rounded-lg my-5 mx-auto text-gray-600 p-5 "
+      className="grid md:flex w-80 md:w-[50%] h-full md:h-96 shadow-2xl  border rounded-lg my-5 mx-auto text-gray-600 p-5 "
     >
       <div className="flex flex-col items-center justify-center  m-4">
         <div className="w-40 h-24 border mx-auto mt-10">

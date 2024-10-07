@@ -8,9 +8,9 @@ import { FaLinkedin } from "react-icons/fa";
 function Footer() {
   return (
     <div>
-      <div className="h-full grid grid-cols-1 md:grid-cols-3 md:w-full bg-gray-700 md:h-96 ">
+      <div className="h-full grid grid-cols-1 md:grid-cols-3 md:w-full bg-gray-700 md:h-72 ">
         <div className=" flex flex-col items-center  p-4 text-gray-500 ">
-          <h1 className=" text-amber-950 font-bold pt-2">
+          <h1 className=" text-white font-bold text-xl p-2">
             Reservations Inyanga
           </h1>
           <p className="text-sm text-white">+263 77 224 1125 </p>
@@ -22,23 +22,23 @@ function Footer() {
         <div className="flex flex-col items-start px-32 justify mt-5 text-white ">
           <h1 className="text-white text-xl font-semibold p-2">Explore us!</h1>
           <div className="flex items-center justify-between gap-1">
-            <SlArrowRight color="brown" size={"0.8rem"} />
+            <SlArrowRight color="white" size={"0.8rem"} />
             <Link href={""}>About Us</Link>
           </div>
           <div className="flex items-center justify-between gap-1">
-            <SlArrowRight color={"brown"} size={"0.8rem"} />
+            <SlArrowRight color={"white"} size={"0.8rem"} />
             <Link href={""}>Terms & Conditions</Link>
           </div>
           <div className="flex items-center justify-between gap-1">
-            <SlArrowRight color={"brown"} size={"0.8rem"} />
+            <SlArrowRight color={"white"} size={"0.8rem"} />
             <Link href={""}>Newss & Articles</Link>
           </div>
           <div className="flex items-center justify-between gap-1">
-            <SlArrowRight color={"brown"} size={"0.8rem"} />
+            <SlArrowRight color={"white"} size={"0.8rem"} />
             <Link href={""}>How we work</Link>
           </div>
           <div className="flex items-center justify-between gap-1">
-            <SlArrowRight color={"brown"} size={"0.8rem"} />
+            <SlArrowRight color={"white"} size={"0.8rem"} />
             <Link href={""}>Contact Us</Link>
           </div>
         </div>
@@ -66,6 +66,8 @@ function Footer() {
           {/* <p>Email: info@tinasoftnexus.co.zw</p> */}
         </div>
       </div>
+      <hr className=" w-[90%] mx-auto -translate-y-10" />
+
       <div className="flex items-center justify-center w-full h-10 bg-gray-900">
         <p className="text-white text-sm">
           Copyright 2023 by <Link href={""}>TinaSoft Nexus</Link>
