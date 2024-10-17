@@ -8,18 +8,16 @@ import { FaLinkedin } from "react-icons/fa";
 function Footer() {
   return (
     <div>
-      <div className="h-full grid grid-cols-1 md:grid-cols-3 md:w-full bg-gray-700 md:h-72 ">
-        <div className=" flex flex-col items-center  p-4 text-gray-500 ">
-          <h1 className=" text-white font-bold text-xl p-2">
-            Reservations Inyanga
-          </h1>
+      <div className="h-full grid grid-cols-1 md:grid-cols-3 md:w-full bg-gray-700 py-14 md:h-72 ">
+        <div className=" flex flex-col px-20 md:items-center  md:p-4 text-gray-500 ">
+          <h1 className=" text-white font-bold text-xl p-2">Contact us!</h1>
           <p className="text-sm text-white">+263 77 224 1125 </p>
           <p className="text-sm text-white">+263 77 214 6008</p>
           <p className="text-sm text-white">+263 71 221 4219</p>
 
           <div></div>
         </div>
-        <div className="flex flex-col items-start px-32 justify mt-5 text-white ">
+        <div className="flex flex-col items-start px-20 md:px-32 justify mt-5 text-white ">
           <h1 className="text-white text-xl font-semibold p-2">Explore us!</h1>
           <div className="flex items-center justify-between gap-1">
             <SlArrowRight color="white" size={"0.8rem"} />
@@ -42,7 +40,7 @@ function Footer() {
             <Link href={""}>Contact Us</Link>
           </div>
         </div>
-        <div className="flex flex-col items-center text-white mt-5 px-5">
+        <div className="flex flex-col items-center px-20 text-white mt-5 md:px-5">
           <h1 className="text-white text-xl font-semibold p-2">Follow us</h1>
           <p>
             Or just keep up to date with what is happening on any of our social

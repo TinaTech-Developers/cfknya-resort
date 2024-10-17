@@ -27,19 +27,19 @@ function ExploreRooms({ heading }) {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center bg-white">
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7 }}
-        className="text-4xl font-bold"
+        className="text-4xl font-bold text-center md:mb-12"
       >
         <div className="flex items-center justify-center gap-2 my-4">
           <div className="w-10 h-1 bg-amber-700"></div>
           <h1 className="text-lg uppercase text-amber-700">our apartments</h1>
           <div className="w-10 h-1 bg-amber-700"></div>
         </div>
-        <h className="text-green-950">{heading}</h>
+        <h className="text-green-950 text-2xl md:text-3xl ">{heading}</h>
       </motion.div>
       <div className="flex flex-wrap items-center justify- mx-auto">
         {rooms.map((room) => (

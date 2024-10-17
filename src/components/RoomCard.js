@@ -93,7 +93,7 @@ export default function RoomCard({ room }) {
         color: "white",
       }}
       transition={{ duration: 0.9 }}
-      className="flex flex-col w-80 h-full shadow-2xl md:w-96 border  bg-transparent rounded-lg my-5 mx-auto text-gray-600 p-5 "
+      className="flex flex-col w-80 h-full shadow-2xl md:w-96 border  bg-transparent rounded-lg my-5 mx-auto text-gray-600 p-5 bg-white"
     >
       <Image
         src={room.imageUrl}

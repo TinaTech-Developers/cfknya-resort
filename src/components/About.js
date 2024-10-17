@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function About() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 bg-white">
       <div className="col-span-1 px-10">
         <motion.div
           initial={{ y: -100, opacity: 0 }}

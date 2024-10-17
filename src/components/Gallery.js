@@ -5,19 +5,21 @@ import Image from "next/image";
 
 function Gallery() {
   return (
-    <div className="flex flex-col items-center justify-center mt-14">
+    <div className="flex flex-col items-center justify-center mt-14 bg-white">
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7 }}
-        className="text-4xl font-bold"
+        className="text-4xl font-bold text-center"
       >
         <div className="flex items-center justify-center gap-2 my-4">
           <div className="w-10 h-1 bg-amber-700"></div>
           <h1 className="text-lg  uppercase text-amber-700">our gallery</h1>
           <div className="w-10 h-1 bg-amber-700"></div>
         </div>
-        <h className="mx-auto text-green-950 ">Explore Our GALLERY</h>
+        <h className=" text-green-950 text-2xl md:text-3xl ">
+          Explore Our Gallery
+        </h>
       </motion.div>
       <div className="flex flex-wrap items-center justify-center gap-5 mt-10">
         <GalleryCard image={"/img_14.jpg"} />{" "}
@@ -53,7 +55,7 @@ function GalleryCard({ image }) {
       //   color: "white",
       // }}
       transition={{ duration: 0.9 }}
-      className="flex flex-col w-80 h-[300px] shadow-2xl  border  bg-transparent rounded-lg mx-10 my-5 mx-auto text-gray-600 p-5 "
+      className="flex flex-col w-80 h-[300px] shadow-2xl  border  bg-transparent rounded-lg bg-white my-5 mx-auto text-gray-600 p-5 "
     >
       <div className="border ">
         <Image
