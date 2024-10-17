@@ -3,6 +3,7 @@ import SubHero from "@/components/SubHero";
 import React from "react";
 import About from "@/components/About";
 import Staff from "@/components/Staff";
+import Map from "./_components/Map";
 
 function page() {
   return (
@@ -10,7 +11,8 @@ function page() {
       <SubHero head={"About Us"} />
       <About />
 
-      <Staff />
+      {/* <Staff /> */}
+      <Map />
     </Layout>
   );
 }

@@ -67,34 +67,41 @@ function page() {
           Experience the Serenity of Tree Viewing at Novu Resort
         </h1>
         <p>
-          {
-            "This peaceful activity invites guests to explore the lush surroundings, showcasing a stunning array of tree species that form a vibrant and intricate ecosystem."
-          }{" "}
+          This peaceful activity invites guests to explore the lush
+          surroundings, showcasing a stunning array of tree species that form a
+          vibrant and intricate ecosystem.
           <br />
           <br />
-          {
-            " As you embark on guided tours, knowledgeable naturalists will share fascinating insights about the local flora and fauna, revealing the unique characteristics, histories, and ecological roles of each tree. You’ll learn about their growth patterns, the wildlife they support, and their significance to the environment."
-          }{" "}
+          As you embark on guided tours, knowledgeable naturalists will share
+          fascinating insights about the local flora and fauna, revealing the
+          unique characteristics, histories, and ecological roles of each tree.
+          You will learn about their growth patterns, the wildlife they support,
+          and their significance to the environment.
           <br />
           <br />
-          {
-            "Whether you opt for a leisurely stroll along winding paths or a more immersive hike through dense woodlands, tree viewing provides the perfect opportunity to unwind and connect with nature. Breathe in the fresh, invigorating air as you take in the sights and sounds of the resort’s picturesque landscape."
-          }{" "}
+          Whether you opt for a leisurely stroll along winding paths or a more
+          immersive hike through dense woodlands, tree viewing provides the
+          perfect opportunity to unwind and connect with nature. Breathe in the
+          fresh, invigorating air as you take in the sights and sounds of the
+          resort’s picturesque landscape.
           <br />
           <br />
-          {
-            " Along the way, you might encounter a variety of birds and other wildlife, enhancing your experience with the rich tapestry of sounds and sights that nature offers. Take a moment to pause, reflect, and embrace the calming ambiance that surrounds you."
-          }{" "}
+          Along the way, you might encounter a variety of birds and other
+          wildlife, enhancing your experience with the rich tapestry of sounds
+          and sights that nature offers. Take a moment to pause, reflect, and
+          embrace the calming ambiance that surrounds you.
           <br />
           <br />
-          {
-            "As you traverse the beautiful grounds of Novu Resort, you’ll discover hidden nooks and tranquil spots perfect for relaxation or contemplation. Capture the stunning views with your camera or simply enjoy the beauty that nature has to offer."
-          }
+          As you traverse the beautiful grounds of Novu Resort, you will
+          discover hidden nooks and tranquil spots perfect for relaxation or
+          contemplation. Capture the stunning views with your camera or simply
+          enjoy the beauty that nature has to offer.
           <br />
           <br />
-          {
-            " Experience the unparalleled tranquility of tree viewing at Novu Resort, where every moment spent among the trees is a chance to reconnect with the natural world and discover its beauty at its finest!"
-          }
+          Experience the unparalleled tranquility of tree viewing at Novu
+          Resort, where every moment spent among the trees is a chance to
+          reconnect with the natural world and discover its beauty at its
+          finest!
         </p>
       </div>
     </Layout>
