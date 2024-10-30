@@ -41,7 +41,7 @@ function ExploreRooms({ heading }) {
         </div>
         <h className="text-green-950 text-2xl md:text-3xl ">{heading}</h>
       </motion.div>
-      <div className="flex flex-wrap items-center justify- mx-auto">
+      <div className="flex flex-col w-full items-center justify- mx-auto">
         {rooms.map((room) => (
           <RoomCard key={room._id} room={room} />
         ))}

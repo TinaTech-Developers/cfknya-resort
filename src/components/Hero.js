@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import HeroCard from "./HeroCard";
 import Inquiry from "./Inquiry";
+import HeroCard1 from "./HeroCard1";
 
 export default function Hero() {
   const progressCircle = useRef(null);
@@ -33,7 +34,7 @@ export default function Hero() {
         </SwiperSlide>
 
         <SwiperSlide>
-          <HeroCard />
+          <HeroCard1 />
           <Inquiry />
         </SwiperSlide>
       </Swiper>

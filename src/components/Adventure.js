@@ -43,7 +43,7 @@ function Adventure() {
       <Images
         image={"/img_8.jpg"}
         heading={"Thrilling Quad Biking Adventures at Novu Resort"}
-        link={"/"}
+        link={"/quadbiking"}
         description={
           "Experience the thrill of quad biking at Novu Resort, where adventure meets stunning natural beauty. Our guided tours cater to all skill levels, allowing you to explore diverse terrains, from lush forests to rolling hills. Safety is our priority, with high-quality gear provided and thorough briefings before you hit the trails. Whether you’re seeking an adrenaline rush with friends or a unique solo adventure, quad biking at Novu Resort promises unforgettable memories in a breathtaking setting. Embrace the excitement and connect with nature for an adventure like no other!"
         }
