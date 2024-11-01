@@ -177,9 +177,10 @@ export default function RoomCard({ room }) {
             />
           </SwiperSlide>
         </Swiper>
-        <p className="p-2 relative z-20 bg-green-900 w-[9rem] text-center text-white -translate-y-6 translate-x-5">
-          ${room.price}/Night
-        </p>
+        {/* <p className="p-2 relative z-20 bg-green-900 w-[9rem] text-center text-white -translate-y-6 translate-x-5">
+         
+        </p> */}
+        {/* PRICE GUIDE */}
         <hr className="w-[96%] mx-auto mb-4" />
         <div className="grid grid-cols-1 md:grid-cols-3 mx-5">
           <div className="col-span-1 flex flex-col items-start justify-between pr-4">

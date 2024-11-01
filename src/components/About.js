@@ -29,19 +29,22 @@ function About() {
         >
           <p>
             {" "}
-            Welcome to CFK, your ultimate destination for relaxation and
+            Welcome to Novu Resort, your ultimate destination for relaxation and
             rejuvenation. Nestled amidst the serene landscapes and breathtaking
             views, our resort is a haven of tranquility, offering an escape from
-            the hustle and bustle of everyday life. Our story began over a
-            decade ago when our founder, a passionate traveler, fell in love
-            with this idyllic location. He envisioned a place where people could
-            experience the beauty of nature while enjoying the comforts of a
-            home away from home. Thus, CFK was born. Today, we offer a range of
-            luxurious accommodations, from cozy cabins to spacious villas, all
-            designed with your comfort in mind. Our facilities include a
-            world-class spa, a gourmet restaurant serving local and
-            international cuisine, and a variety of recreational activities for
-            all ages.
+            the hustle and bustle of everyday life. We are about 18km from
+            Nyanga Centre or Nyangani Mountain about 2.7km from Troutbeck
+            Resort. Our story began when our founder, a passionate traveller,
+            fell in love with this idyllic location. He envisioned a place where
+            people could experience the beauty of nature while enjoying the
+            comforts of a home away from home. Thus, Novu Resort was born.
+            Today, we offer a range of luxurious accommodation e.g. spacious
+            family homes, standard double room, standard twin room, executive
+            suites, all designed with your comfort in mind. Our facilities
+            include a restaurant serving local and international cuisine,
+            conference room and a variety of recreational activities for all
+            ages e.g quad biking, team building exercise, guided tours / walks
+            and game viewing by arrangement with national parks.
           </p>
           <div className="flex items-center justify-between gap-10 mt-10 md:mx-10">
             <div className="w-24 h-24 border">
@@ -64,7 +67,7 @@ function About() {
       <div className="col-span-1 mx-auto my-20">
         <div className="grid grid-cols-1 md:flex items-baseline gap-2">
           <Image
-            src={"/img_6.jpg"}
+            src={"/img_9.jpg"}
             height={300}
             width={200}
             alt=""
@@ -80,14 +83,14 @@ function About() {
         </div>
         <div className="flex mt-2 gap-2">
           <Image
-            src={"/img_6.jpg"}
+            src={"/banar.jpg"}
             height={300}
             width={200}
             alt=""
             className=" w-40 h-36 md:w-24 md:h-28 object-cover items-end"
           />
           <Image
-            src={"/img_7.jpg"}
+            src={"/IMG-20231122-WA0048.jpg"}
             height={400}
             width={300}
             alt=""

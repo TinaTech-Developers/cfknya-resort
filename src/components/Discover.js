@@ -10,11 +10,11 @@ function Discover() {
           <h1 className="text-lg  uppercase text-amber-700">our rooms</h1>
           <div className="w-10 h-1 bg-orange-700"></div>
         </div>
-        <p className="text-3xl font-bold">Discover A Brand Luxurious Hotel</p>
+        <p className="text-3xl font-bold">Discover A Brand Luxurious Resort</p>
         <p className="my-10">
-          Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-          diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
-          lorem sit clita duo justo magna dolore erat amet
+          Step into a world of elegance at our brand new luxurious resort. Enjoy
+          stunning accommodations, top-notch amenities, and exceptional service
+          designed for your comfort and relaxation.
         </p>
         <div className="flex items-center justify-between">
           <FillButton name={"View More!"} link={"/rooms"} onClick={""} />

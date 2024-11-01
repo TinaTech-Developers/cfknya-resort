@@ -243,7 +243,7 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
                 <h2 className="font-semibold">Inclusions</h2>
                 <p className="text-xs">
                   {
-                    "  Accommodation 2-bedroom apartment comprising of master bedroom ensuite, a twin bedroom (2 single beds) and a convertible sofa couch in the lounge to house a total of six people. ** DSTV (TV in lounge and Master bedroom) and WiFi, common bathroom with shower, generator for lights, TV, fridge & booster pump (it does not power equipment with elements). A braai area for each apartment, valuables safe and well-equipped kitchen with gas stove and oven, microwave, toaster, crockery, cutlery, glassware, pots & pans etc. Electric blanket in Master bedroom when cold. Car cleaning and housekeeping services available. Additional bed available on request at cost."
+                    "  Accommodation 2-bedroom apartment comprising of master bedroom ensuite, a twin bedroom (2 single beds) and a convertible sofa couch in the lounge to house a total of six people. DSTV (TV in lounge and Master bedroom) and WiFi, common bathroom with shower, generator for lights, TV, fridge & booster pump (it does not power equipment with elements). A braai area for each apartment, valuables safe and well-equipped kitchen with gas stove and oven, microwave, toaster, crockery, cutlery, glassware, pots & pans etc. Electric blanket in master bedroom when cold. Car cleaning and housekeeping services available. Additional bed available on request at cost."
                   }
                 </p>
               </div>
@@ -252,7 +252,7 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
                 <h2 className="font-semibold">Checking In and Checking Out:</h2>
                 <li className="text-xs">
                   {
-                    " Check-in time is from 1400hrs until 2000hrs (unless with prior arrangements). Guests are required to present payment upon check-in along with a valid form of identification"
+                    " Check-in time is from 1400hrs until 2000hrs (unless with prior arrangements). Guests are required to present payment upon check-in along with a valid form and personal identity document."
                   }
                 </li>
                 <li className="text-xs">
@@ -264,16 +264,18 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
               <div className="mt-4">
                 <h2 className="font-semibold">Terms and Conditions </h2>
                 <li className="text-xs">
-                  {" Smoking is prohibited in all rooms and the Lapa."}
+                  {
+                    " Smoking is prohibited in all rooms and the conference room."
+                  }
                 </li>
                 <li className="text-xs">
-                  {"No loud music or shouting allowed within the premises."}
+                  {"No loud music or shouting allowed within the rooms."}
                 </li>
-                <li className="text-xs">
+                {/* <li className="text-xs">
                   {
                     " No phone calls / loud social media video streams. (Please respect other guests) "
                   }
-                </li>
+                </li> */}
                 <li className="text-xs">
                   {
                     "Switch off all lights, TV and air conditioners (where available) when exiting rooms"

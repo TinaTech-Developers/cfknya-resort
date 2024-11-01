@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 function SubHero({ head }) {
   return (
-    <div className="bg-scroll bg-[url('/big_image_1.jpg')] bg-no-repeat w-[100%] object-cover h-[500px]">
+    <div className="bg-scroll bg-[url('/banar.jpg')] bg-no-repeat w-[100%] object-cover h-[500px]">
       <div className="bg-scroll bg-black bg-opacity-70 h-[500px]">
         <div className="px-6 translate-y-80 md:pl-36 ">
           <motion.div

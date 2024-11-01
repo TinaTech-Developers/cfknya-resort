@@ -26,26 +26,28 @@ function Adventure() {
         video={
           "https://utfs.io/f/M8crfG3am8lfL9D9rm9uKAaL1TB6NQhjD0kumYc2sR5vVnlz"
         }
-        heading={"Discover the Beauty of Nyanga, Zimbabwes"}
+        heading={
+          "Welcome to Nyanga, a Leading Tourist Resort Destination in Zimbabwe"
+        }
         link={"/trees"}
         description={
-          "Nyanga, located in the Eastern Highlands of Zimbabwe, is a breathtaking destination known for its stunning landscapes, lush forests, and rich cultural heritage. Here’s a brief overview of what makes Nyanga a must-visit travel spot."
+          "Nyanga, located in the Eastern Highlands of Zimbabwe, is a breathtaking destination known for its spectacular landscapes, diverse cultural heritage and amazing forests, making it a must-visit tourist destination. Its cool climatic and natural environment make it an exciting retreat for nature lovers and adventure seekers."
         }
       />
       <Video
         video={"bgvideo.mp4"}
-        heading={"Experience the Serenity of Tree Viewing at Novu Resort"}
+        heading={"Forest View along the main road to Nyanga"}
         link={"/"}
-        description={
-          "Immerse yourself in the serene beauty of nature with tree viewing at Novu Resort. This peaceful activity invites guests to explore the lush surroundings, highlighting the diverse species of trees that create a vibrant ecosystem. Guided tours provide insightful information about the local flora and fauna, allowing you to appreciate the unique characteristics and histories of the trees. Whether you choose a leisurely stroll or a more immersive hike, tree viewing offers a perfect opportunity to unwind, connect with nature, and enjoy the tranquility of the resort's picturesque landscape. Experience the calming ambiance and discover the beauty of nature at its finest!"
-        }
+        // description={
+        //   "Immerse yourself in the serene beauty of nature with tree viewing at Novu Resort. This peaceful activity invites guests to explore the lush surroundings, highlighting the diverse species of trees that create a vibrant ecosystem. Guided tours provide insightful information about the local flora and fauna, allowing you to appreciate the unique characteristics and histories of the trees. Whether you choose a leisurely stroll or a more immersive hike, tree viewing offers a perfect opportunity to unwind, connect with nature, and enjoy the tranquility of the resort's picturesque landscape. Experience the calming ambiance and discover the beauty of nature at its finest!"
+        // }
       />
       <Images
         image={"/img_8.jpg"}
         heading={"Thrilling Quad Biking Adventures at Novu Resort"}
         link={"/quadbiking"}
         description={
-          "Experience the thrill of quad biking at Novu Resort, where adventure meets stunning natural beauty. Our guided tours cater to all skill levels, allowing you to explore diverse terrains, from lush forests to rolling hills. Safety is our priority, with high-quality gear provided and thorough briefings before you hit the trails. Whether you’re seeking an adrenaline rush with friends or a unique solo adventure, quad biking at Novu Resort promises unforgettable memories in a breathtaking setting. Embrace the excitement and connect with nature for an adventure like no other!"
+          "Experience the adrenaline rush of quad biking at Novu Resort with two exciting routes tailored for every adventurer. Choose the adventurous and risky route for an exhilarating ride through rugged terrains, steep hills, and challenging obstacles that will test your skills and bravery. Alternatively, opt for the easy route, perfect for beginners or those seeking a more relaxed experience, featuring scenic paths and gentle slopes that still offer stunning views of the surrounding landscape. Whether you’re seeking thrills or a leisurely ride, Novu Resort has the perfect quad biking adventure for you!"
         }
       />
     </div>

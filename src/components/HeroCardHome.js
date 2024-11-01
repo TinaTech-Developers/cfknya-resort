@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 
 import Typewriter from "typewriter-effect";
 
-function HeroCard1({ text, text1, head }) {
+function HeroCardHome({ text, text1, head }) {
   //   let text = "Welcome To Our Luxury Villas";
   //   let text1 = "Click The Button Below for Bookings";
 
   return (
-    <div className="bg-cover bg-no-repeat bg-center bg-[url('/booadroom.jpg')] w-screen h-screen top-40">
+    <div className="bg-cover bg-no-repeat bg-center bg-[url('/banner2.jpg')] w-screen h-screen top-40">
       <div className="bg-scroll  h-[600px]">
         <div className="px-6 translate-y-80 md:pl-36 ">
           <motion.div
@@ -47,4 +47,4 @@ function HeroCard1({ text, text1, head }) {
   );
 }
 
-export default HeroCard1;
+export default HeroCardHome;
