@@ -118,7 +118,7 @@ export default function RoomCard({ room }) {
       //   color: "white",
       // }}
       transition={{ duration: 0.9 }}
-      className="flex flex-col w-80 h-40 md:w-[1000px] md:h-full shadow-2xl   bg-transparent  my-5 mx-auto text-gray-600 p-5 bg-white"
+      className="grid grid-cols-1 md:grid-cols-3 md:h-full shadow-2xl   bg-transparent  my-5 mx-auto text-gray-600 p-5 bg-white"
     >
       <h1 className=" text-xl md:text-2xl text-center my-6">{room.name}</h1>{" "}
       {/* <Image
@@ -128,7 +128,7 @@ export default function RoomCard({ room }) {
         alt=""
         className="w-80 md:w-[96%] h-full md:h-[500px] object-cover mx-auto"
       /> */}
-      <div className="col-span-1 md:col-span-3 ">
+      <div className="col-span-1 md:col-span-3 md:w-[1000px] mx-4">
         <Swiper
           // install Swiper modules
           modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -146,7 +146,7 @@ export default function RoomCard({ room }) {
               alt="room image"
               height={400}
               width={400}
-              className="md:h-[30rem] w-full object-cover px-4"
+              className="md:h-[25rem] w-full object-cover px-4"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -155,7 +155,7 @@ export default function RoomCard({ room }) {
               alt="room image"
               height={400}
               width={400}
-              className="h-[30rem] w-full object-cover"
+              className="h-[25rem] w-full object-cover"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -164,7 +164,7 @@ export default function RoomCard({ room }) {
               alt="room image"
               height={400}
               width={400}
-              className="h-[30rem] w-full object-cover"
+              className="h-[25rem] w-full object-cover"
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -173,7 +173,7 @@ export default function RoomCard({ room }) {
               alt="room image"
               height={400}
               width={400}
-              className="h-[30rem] w-full object-cover"
+              className="h-[25rem] w-full object-cover"
             />
           </SwiperSlide>
         </Swiper>

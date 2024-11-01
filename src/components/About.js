@@ -66,36 +66,76 @@ function About() {
       </div>
       <div className="col-span-1 mx-auto my-20">
         <div className="grid grid-cols-1 md:flex items-baseline gap-2">
-          <Image
-            src={"/img_9.jpg"}
-            height={300}
-            width={200}
-            alt=""
-            className="w-80 h-72 md:h-56  md:w-48 object-cover"
-          />
-          <Image
-            src={"/img_7.jpg"}
-            height={400}
-            width={300}
-            alt=""
-            className="w-80 h-72 object-cover"
-          />
+          <div className="">
+            <Image
+              src={"/img_9.jpg"}
+              height={300}
+              width={200}
+              alt=""
+              className="w-80 h-72 md:h-56  md:w-48 object-cover"
+            />
+            <motion.p
+              initial={{ x: 100, opacity: 0 }}
+              whileInView={{ x: 0, y: -30, opacity: 1 }}
+              transition={{ duration: 0.7 }}
+              className="absolute -translate-y-36 px-4 text-white text-sm bg-green-950"
+            >
+              Bird Watching
+            </motion.p>
+          </div>
+          <div className="">
+            <Image
+              src={"/img_7.jpg"}
+              height={400}
+              width={300}
+              alt=""
+              className="w-80 h-72 object-cover"
+            />
+            <motion.p
+              initial={{ x: 100, opacity: 0 }}
+              whileInView={{ x: 0, y: -30, opacity: 1 }}
+              transition={{ duration: 0.7 }}
+              className="absolute -translate-y-8 px-4 text-white text-sm bg-green-950"
+            >
+              Nyangani Mountain
+            </motion.p>
+          </div>
         </div>
-        <div className="flex mt-2 gap-2">
-          <Image
-            src={"/banar.jpg"}
-            height={300}
-            width={200}
-            alt=""
-            className=" w-40 h-36 md:w-24 md:h-28 object-cover items-end"
-          />
-          <Image
-            src={"/IMG-20231122-WA0048.jpg"}
-            height={400}
-            width={300}
-            alt=""
-            className="w-40 h-36 object-cover"
-          />
+        <div className="flex mt-2 md:gap-2">
+          <div className="">
+            <Image
+              src={"/banar.jpg"}
+              height={300}
+              width={200}
+              alt=""
+              className=" w-40 h-36 md:w-40 md:h-40 object-cover items-end"
+            />
+            <motion.p
+              initial={{ x: 100, opacity: 0 }}
+              whileInView={{ x: 0, y: -30, opacity: 1 }}
+              transition={{ duration: 0.7 }}
+              className="absolute -translate-y-8 px-2 text-white text-sm bg-green-950"
+            >
+              Conference
+            </motion.p>
+          </div>
+          <div className="">
+            <Image
+              src={"/IMG-20231122-WA0048.jpg"}
+              height={400}
+              width={300}
+              alt=""
+              className="w-40 h-36 md:w-56 md:h-48 object-cover"
+            />
+            <motion.p
+              initial={{ x: 100, opacity: 0 }}
+              whileInView={{ x: 0, y: -30, opacity: 1 }}
+              transition={{ duration: 0.7 }}
+              className="absolute -translate-y-8 px-2 text-white text-sm bg-green-950"
+            >
+              Apartments
+            </motion.p>
+          </div>
         </div>
       </div>
     </div>
