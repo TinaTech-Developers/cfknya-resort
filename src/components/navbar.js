@@ -21,13 +21,13 @@ function Navbar() {
         {/* <Link href={"/"} className="text-3xl font-bold text-green-900">
           {/* NOVU RESORT 
         </Link> */}
-        <div className="w-[70px] h-16 ">
+        <div className="w-[70px] h-16 mb-2">
           <Image
             src={"/logo1.png"}
             alt=""
             height={200}
             width={150}
-            className="object-cover"
+            className="object-cover "
           />
         </div>
 
