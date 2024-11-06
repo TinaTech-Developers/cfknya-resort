@@ -16,24 +16,25 @@ import Image from "next/image";
 function page() {
   return (
     <Layout>
-      <div className="flex items-center justify-between mx-10 mt-24 bg-white">
-        <div>
-          <h1 className="text-2xl md:text-2xl font-semibold">
-            Tree Viewing at Novu Resort
-          </h1>
-          <p className="flex items-center gap-5 text-gray-600">
-            <MdLocationSearching size={28} color="red" />
-            Inyanga, Zimbabwe
-          </p>
+      <div className="mx-4 md:mx-10  bg-white">
+        <div className="flex items-center justify-between mx-4 md:mx-10 mt-24 bg-white">
+          <div>
+            <h1 className="text-xl md:text-2xl font-semibold">Tree Viewing</h1>
+            <p className="flex items-center gap-1 md:gap-5 text-gray-600">
+              <MdLocationSearching size={28} color="red" />
+              Inyanga, Zimbabwe
+            </p>
+          </div>
+          <Link
+            href={"/todo"}
+            className="flex items-center justify-center gap-1 border px-3 py-2 bg-green-900 text-white"
+          >
+            <ArrowBigLeft />
+            Back
+          </Link>
         </div>
-        <Link
-          href={"/todo"}
-          className="flex items-center justify-center gap-1 border px-3 py-2 bg-green-900 text-white"
-        >
-          <ArrowBigLeft />
-          Back
-        </Link>
       </div>
+      <hr className="mx-4 md:mx-10 my-4" />
       <Swiper
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y]}
