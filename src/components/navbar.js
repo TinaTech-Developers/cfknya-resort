@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
@@ -17,9 +18,19 @@ function Navbar() {
   return (
     <div className="shadow-lg w-full fixed top-0 left-0 z-50 bg-white">
       <div className="md:flex items-center justify-between bg- py-4  md:px-10 px-7 h-20 border-b-">
-        <Link href={"/"} className="text-3xl font-bold text-green-900">
-          NOVU RESORT
-        </Link>
+        {/* <Link href={"/"} className="text-3xl font-bold text-green-900">
+          {/* NOVU RESORT 
+        </Link> */}
+        <div className="w-[70px] h-16 ">
+          <Image
+            src={"/logo1.png"}
+            alt=""
+            height={200}
+            width={150}
+            className="object-cover"
+          />
+        </div>
+
         <div
           onClick={() => setOpen(!open)}
           className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"

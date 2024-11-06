@@ -16,7 +16,7 @@ import Image from "next/image";
 function page() {
   return (
     <Layout>
-      <div className="flex items-center justify-between mx-10 md:mt-20">
+      <div className="flex items-center justify-between mx-10 mt-24">
         <div>
           <h1 className="text-2xl md:text-2xl font-semibold">
             Tree Viewing at Novu Resort
@@ -63,7 +63,7 @@ function page() {
         </SwiperSlide>
       </Swiper>
       <div className="m-10 md:mx-20">
-        <h1 className="text-xl md:text-2xl font-semibold my-4">
+        <h1 className="text-xl md:text-2xl font-semibold my-4 text-green-950">
           Experience the Serenity of Tree Viewing at Novu Resort
         </h1>
         <p>
@@ -112,9 +112,9 @@ function Video({ video }) {
   return (
     <div className="flex flex-col items-center justify-center  w-full h-full mt-10">
       <div className="w-[90%] gap-10 ">
-        <div className="flex justify-center items-center h-96 md:h-[27rem] w-full mb-4">
+        <div className="w-[80vw] h-[27rem] mx-auto overflow-hidden sm:w-[90vw] ">
           <video
-            className="w-[100%] h-96 md:h-[27rem]  object-cover"
+            className="object-cover w-full h-full md:h-[27rem]"
             autoPlay
             loop
             muted
@@ -131,13 +131,14 @@ function Video({ video }) {
 function Images({ image }) {
   return (
     <div className="flex flex-col items-center justify-center  w-full h-full my-10">
-      <div className="w-[90%] gap-10 ">
+      <div className="w-[80vw] h-[27rem] mx-auto overflow-hidden sm:w-[90vw] ">
         <Image
           src={image}
           alt=""
-          height={400}
-          width={500}
-          className="w-[100%] h-[27rem] object-cover "
+          layout="responsive"
+          width={1600} // Placeholder for width (adjust based on your actual image size)
+          height={432} // Placeholder for height (proportional to 27rem)
+          className="object-cover w-full h-full md:h-[27rem] "
         />
       </div>
     </div>

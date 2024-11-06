@@ -5,13 +5,16 @@ const Images = ({ image, heading, description, link }) => {
   return (
     <div className="flex flex-col items-center justify-center  w-full h-full my-10">
       <div className="w-[90%] gap-10 ">
-        <Image
-          src={image}
-          alt=""
-          height={400}
-          width={500}
-          className="w-[100%] h-[27rem] object-cover "
-        />
+        <div className="w-[80vw] h-[27rem] mx-auto overflow-hidden sm:w-[90vw] ">
+          <Image
+            src={image}
+            alt=""
+            layout="responsive"
+            width={1600} // Placeholder for width (adjust based on your actual image size)
+            height={432} // Placeholder for height (proportional to 27rem)
+            className="object-cover w-full h-full md:h-[27rem] "
+          />
+        </div>
 
         <Link
           className="mt-10 text-xl md:text-2xl font-bold underline hover:text-green-700"
