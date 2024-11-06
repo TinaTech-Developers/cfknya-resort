@@ -16,7 +16,7 @@ import Image from "next/image";
 function page() {
   return (
     <Layout>
-      <div className="flex items-center justify-between mx-10 mt-24">
+      <div className="flex items-center justify-between mx-10 mt-24 bg-white">
         <div>
           <h1 className="text-2xl md:text-2xl font-semibold">
             Tree Viewing at Novu Resort

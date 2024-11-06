@@ -5,7 +5,7 @@ const Images = ({ image, heading, description, link }) => {
   return (
     <div className="flex flex-col items-center justify-center  w-full h-full my-10">
       <div className="w-[90%] gap-10 ">
-        <div className="w-[80vw] h-[27rem] mx-auto overflow-hidden sm:w-[90vw] ">
+        <div className="w-[90vw] h-[27rem] mx-auto overflow-hidden sm:w-[90vw] ">
           <Image
             src={image}
             alt=""

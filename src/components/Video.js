@@ -5,9 +5,9 @@ const Video = ({ video, heading, description, link }) => {
   return (
     <div className="flex flex-col items-center justify-center  w-full h-full mt-10">
       <div className="w-[90%] gap-10 ">
-        <div className="w-[80vw] h-[27rem] mx-auto overflow-hidden sm:w-[90vw] ">
+        <div className="w-[90vw] h-[27rem] mx-auto overflow-hidden sm:w-[90vw] ">
           <video
-            className="object-cover w-full h-full md:h-[27rem]"
+            className="w-[100%] h-96 md:h-[27rem]  object-cover"
             autoPlay
             loop
             muted

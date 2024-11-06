@@ -18,7 +18,7 @@ function page() {
     <Layout>
       <div className="flex items-center justify-between mx-10 mt-24 bg-white">
         <div>
-          <h1 className="text-2xl md:text-2xl font-semibold">
+          <h1 className="text-2xl md:text-2xl font-semibold text-green-950">
             Thrilling Quad Biking Adventures at Novu Resort
           </h1>
           <p className="flex items-center gap-5 text-gray-600">
