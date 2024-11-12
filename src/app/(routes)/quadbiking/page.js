@@ -1,5 +1,6 @@
 "use client";
 import Layout from "@/components/Layout";
+import { motion } from "framer-motion";
 import React from "react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -26,7 +27,7 @@ function page() {
             </p>
           </div>
           <Link
-            href={"/todo"}
+            href={"/"}
             className="flex items-center justify-center gap-1 border px-3 py-2 bg-green-900 text-white"
           >
             <ArrowBigLeft />
@@ -48,16 +49,12 @@ function page() {
         // onSlideChange={() => console.log("slide change")}
       >
         <SwiperSlide>
-          <Video
-            video={
-              "https://utfs.io/f/M8crfG3am8lfL9D9rm9uKAaL1TB6NQhjD0kumYc2sR5vVnlz"
-            }
-          />
+          <Video video={"bike.mp4"} name={"Easy Route"} />
         </SwiperSlide>
         <SwiperSlide>
-          <Video video={"/bgvideo.mp4"} />
+          <Video video={"/bgvideo.mp4"} name={"Risky Route "} />
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <Images image={"/img_10.jpg"} />
         </SwiperSlide>
         <SwiperSlide>
@@ -66,7 +63,7 @@ function page() {
               "https://i.pinimg.com/originals/0b/8e/64/0b8e641a1eb87c4a1f140d3791de0c0a.jpg"
             }
           />
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
       <div className="m-10 md:mx-20">
         <h1 className="text-xl md:text-2xl font-semibold my-4 text-green-950">
@@ -109,7 +106,7 @@ function page() {
   );
 }
 
-function Video({ video }) {
+function Video({ video, name }) {
   return (
     <div className="flex flex-col items-center justify-center  w-full h-full mt-10">
       <div className="w-[90%] gap-10 ">
@@ -125,6 +122,14 @@ function Video({ video }) {
           </video>
         </div>
       </div>
+      <motion.p
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, y: -30, opacity: 1 }}
+        transition={{ duration: 0.7 }}
+        className="absolute md:mt-96 md:mr-[900px] mt-64 p-2 rounded-lg border border-white  text-white text-sm bg-green-950"
+      >
+        {name}
+      </motion.p>
     </div>
   );
 }

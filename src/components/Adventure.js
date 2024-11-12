@@ -29,7 +29,7 @@ function Adventure() {
         heading={
           "Welcome to Nyanga, a Leading Tourist Resort Destination in Zimbabwe"
         }
-        link={"/trees"}
+        link={"/inyanga"}
         description={
           "Nyanga, located in the Eastern Highlands of Zimbabwe, is a breathtaking destination known for its spectacular landscapes, diverse cultural heritage and amazing forests, making it a must-visit tourist destination. Its cool climatic and natural environment make it an exciting retreat for nature lovers and adventure seekers."
         }
@@ -39,10 +39,10 @@ function Adventure() {
           "https://i.pinimg.com/originals/0b/8e/64/0b8e641a1eb87c4a1f140d3791de0c0a.jpg"
         }
         heading={"An Adventure Through Zimbabwe's Eastern Highlands"}
-        link={"/"}
-        // description={
-        //   "Immerse yourself in the serene beauty of nature with tree viewing at Novu Resort. This peaceful activity invites guests to explore the lush surroundings, highlighting the diverse species of trees that create a vibrant ecosystem. Guided tours provide insightful information about the local flora and fauna, allowing you to appreciate the unique characteristics and histories of the trees. Whether you choose a leisurely stroll or a more immersive hike, tree viewing offers a perfect opportunity to unwind, connect with nature, and enjoy the tranquility of the resort's picturesque landscape. Experience the calming ambiance and discover the beauty of nature at its finest!"
-        // }
+        link={"/adventure"}
+        description={
+          "Zimbabwe's Eastern Highlands offers a stunning adventure with its misty Bvumba Mountains, dramatic waterfalls in Nyanga National Park, and the challenging ascent of Mount Nyangani. The region is rich in biodiversity, culture, and history, featuring picturesque trails, local villages, and ancient ruins. Whether trekking, birdwatching, or exploring, it’s a hidden gem for outdoor lovers and culture seekers alike."
+        }
       />
       <Video
         video={"/bike.mp4"}

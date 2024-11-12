@@ -35,7 +35,7 @@ function Navbar() {
           onClick={() => setOpen(!open)}
           className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"
         >
-          {open ? <IoMdClose color="white" /> : <IoMdMenu color="green" />}
+          {open ? <IoMdClose color="green" /> : <IoMdMenu color="green" />}
         </div>
         <ul
           className={`md:flex md:items-center md:pb-0 pb-4
