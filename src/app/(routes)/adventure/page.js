@@ -230,7 +230,7 @@ function Images({ image, name }) {
         <Image
           src={image}
           alt=""
-          layout="responsive"
+          layout=""
           width={1600} // Placeholder for width (adjust based on your actual image size)
           height={432} // Placeholder for height (proportional to 27rem)
           className="object-cover w-full h-full md:h-[27rem] "
