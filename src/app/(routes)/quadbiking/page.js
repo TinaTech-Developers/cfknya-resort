@@ -20,7 +20,9 @@ function page() {
       <div className=" mx-4 md:mx-10  bg-white">
         <div className="flex items-center justify-between mx-4 md:mx-10 pt-24 bg-white">
           <div>
-            <h1 className="text-xl md:text-2xl font-semibold">Quad Bikes</h1>
+            <h1 className="text-xl md:text-2xl font-semibold text-green-950">
+              Quad Bikes
+            </h1>
             <p className="flex items-center gap-1 md:gap-5 text-gray-600">
               <MdLocationSearching size={28} color="red" />
               Inyanga, Zimbabwe

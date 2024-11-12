@@ -18,9 +18,9 @@ function page() {
   return (
     <Layout>
       <div className="mx-4 md:mx-10  bg-white">
-        <div className="flex items-center justify-between mx-4 md:mx-10 mt-24 bg-white">
+        <div className="flex items-center justify-between mx-4 md:mx-10 pt-24 bg-white">
           <div>
-            <h1 className="text-xl md:text-2xl font-semibold capitalize">
+            <h1 className="text-xl md:text-2xl font-semibold text-green-950 capitalize">
               must-visit spots
             </h1>
             <p className="flex items-center gap-1 md:gap-5 text-gray-600">

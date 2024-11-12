@@ -118,7 +118,7 @@ export default function RoomCard({ room }) {
       //   color: "white",
       // }}
       transition={{ duration: 0.9 }}
-      className="grid grid-cols-1 md:grid-cols-3 md:h-full shadow-2xl   bg-transparent  my-5 mx-auto text-gray-600 p-5 bg-white"
+      className="grid grid-cols-1 md:grid-cols-3 md:h-full shadow-2xl   bg-transparent  my-5 mx-auto text-gray-700 p-5 bg-white"
     >
       <h1 className=" text-xl md:text-2xl text-center my-6">{room.name}</h1>{" "}
       {/* <Image

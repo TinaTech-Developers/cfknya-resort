@@ -27,7 +27,7 @@ function About() {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7 }}
         >
-          <p>
+          <p className="text-black">
             {" "}
             Welcome to Novu Resort, your ultimate destination for relaxation and
             rejuvenation. Nestled amidst the serene landscapes and breathtaking

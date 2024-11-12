@@ -17,12 +17,12 @@ const Video = ({ video, heading, description, link }) => {
           </video>
         </div>
         <Link
-          className="mt-10 text-xl md:text-2xl font-bold underline hover:text-green-700"
+          className="mt-10 text-xl md:text-2xl font-bold text-green-950 underline hover:text-green-700"
           href={link}
         >
           {heading}
         </Link>
-        <p className="my-4">{description}</p>
+        <p className="my-4 text-black">{description}</p>
       </div>
     </div>
   );
