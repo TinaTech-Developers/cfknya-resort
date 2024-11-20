@@ -21,16 +21,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import {
-  LucideTv2,
-  PowerIcon,
-  PowerSquare,
-  Tv2,
-  Tv2Icon,
-  TvIcon,
-} from "lucide-react";
-import { BsPower } from "react-icons/bs";
-import { Electrolize } from "next/font/google";
+import { LucideTv2, PowerIcon, PowerSquare, Tv2 } from "lucide-react";
 
 export default function RoomCard({ room }) {
   const [modalOpen, setModalOpen] = useState(false);
@@ -184,6 +175,7 @@ export default function RoomCard({ room }) {
         <hr className="w-[96%] mx-auto mb-4" />
         <div className="grid grid-cols-1 md:grid-cols-3 mx-5">
           <div className="col-span-1 flex flex-col items-start justify-between pr-4">
+            <p>{room.price}</p>
             <h1 className="uppercase text-xl mb-4">{room.name}</h1>{" "}
             <p className="pb-4  w-full text-sm">{room.description}</p>
             <Link

@@ -20,7 +20,32 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-function EditRoomDetails({ id, name, price, imageUrl, description }) {
+// Example list of Zimbabwean public holidays (you can update this or fetch from an API)
+const zimbabweHolidays = [
+  "2024-01-01", // New Year's Day
+  "2024-04-18", // Independence Day
+  "2024-05-01", // Labour Day
+  "2024-08-14", // Heroes Day
+  "2024-08-15", // Unity Day
+  "2024-12-25", // Christmas Day
+  // "2024-11-20",
+];
+
+// Helper function to check if today is a holiday
+function isHoliday(date) {
+  const formattedDate = date.toISOString().split("T")[0]; // Format as 'YYYY-MM-DD'
+  return zimbabweHolidays.includes(formattedDate);
+}
+
+function EditRoomDetails({
+  id,
+  name,
+
+  price,
+  imageUrl,
+  description,
+  priceNumber,
+}) {
   // const API_BASE_URL =
   //   process.env.API_BASE_URL ||
   //   "http://localhost:3000" ||
@@ -45,6 +70,25 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
   const [difference, setDifference] = useState(null);
   let [total, setTotal] = useState("");
 
+  const [onHoliday, setOnHoliday] = useState(false);
+  const [error, setError] = useState(null);
+
+  const calculateAdjustedPrice = (price) => {
+    const today = new Date();
+    let adjustedPrice = parseFloat(price); // Convert string price to float
+
+    if (isHoliday(today)) {
+      adjustedPrice += 50; // Add 50 to the price if today is a holiday
+    }
+
+    return adjustedPrice.toFixed(2); // Return the adjusted price, rounded to 2 decimal places
+  };
+
+  if (error) {
+    return <div>{error}</div>;
+  }
+  const adjustedPrice = calculateAdjustedPrice(price);
+
   const reset = async () => {
     setFullName("");
     setSurname("");
@@ -59,6 +103,7 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
     setDifference(null);
     setTotal("");
   };
+
   const handleBook = async (e) => {
     e.preventDefault();
 
@@ -121,6 +166,7 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
     }
   };
 
+  /* eslint-disable react-hooks/rules-of-hooks */
   useEffect(() => {
     if (arrivaldate && deptdate) {
       const d1 = new Date(arrivaldate);
@@ -218,6 +264,9 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
             <h1 className="text-2xl font-semibold capitalize">
               Room description
             </h1>
+            <p>
+              {price} | {adjustedPrice}
+            </p>
             <p className="text-gray-500">{description}</p>
             <hr className="my-4" />
             <div>
@@ -299,6 +348,8 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
           <p className="text-green-600 text-start">
             Complete this form for booking...
           </p>
+          {isHoliday ? <p>${adjustedPrice} per night</p> : <p>{price}</p>}
+
           <form onSubmit={handleBook}>
             <div className="w-full gap-2 mb-4">
               <div className="fex flex-wrap md:grid md:grid-cols-2 gap-2">
@@ -433,10 +484,10 @@ function EditRoomDetails({ id, name, price, imageUrl, description }) {
             </div>
 
             {difference !== null && (
-              <p className="font-semibold">US${difference * price}</p>
+              <p className="font-semibold">US${difference * adjustedPrice}</p>
             )}
             <p className="font-semibold">
-              US${(total = difference * price)} per {difference} Days
+              US${(total = difference * adjustedPrice)} per {difference} Days
             </p>
             <input value={total} onChange={(e) => setTotal(e.target.value)} />
 
