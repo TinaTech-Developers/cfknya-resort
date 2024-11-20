@@ -22,13 +22,13 @@ import "swiper/css/scrollbar";
 
 // Example list of Zimbabwean public holidays (you can update this or fetch from an API)
 const zimbabweHolidays = [
-  "2024-01-01", // New Year's Day
-  "2024-04-18", // Independence Day
-  "2024-05-01", // Labour Day
-  "2024-08-14", // Heroes Day
-  "2024-08-15", // Unity Day
-  "2024-12-25", // Christmas Day
-  // "2024-11-20",
+  "01-01", // New Year's Day
+  "04-18", // Independence Day
+  "05-01", // Labour Day
+  "08-14", // Heroes Day
+  "08-15", // Unity Day
+  "12-25", // Christmas Day
+  "11-20", // test date
 ];
 
 // Helper function to check if today is a holiday

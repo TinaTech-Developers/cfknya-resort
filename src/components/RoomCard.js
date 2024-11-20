@@ -175,7 +175,6 @@ export default function RoomCard({ room }) {
         <hr className="w-[96%] mx-auto mb-4" />
         <div className="grid grid-cols-1 md:grid-cols-3 mx-5">
           <div className="col-span-1 flex flex-col items-start justify-between pr-4">
-            <p>{room.price}</p>
             <h1 className="uppercase text-xl mb-4">{room.name}</h1>{" "}
             <p className="pb-4  w-full text-sm">{room.description}</p>
             <Link
