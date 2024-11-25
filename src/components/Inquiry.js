@@ -4,37 +4,37 @@ import Link from "next/link";
 
 function Inquiry() {
   return (
-    <div className=" grid grid-cols-1 md:grid-cols-5 w-[90%] md:h-36 h-full gap-4  bg-white shadow-2xl mx-auto -translate-y-16 -z-50">
-      <div className="col-span-1 mx-auto">
+    <div className=" grid grid-cols-1 md:grid-cols-5 w-[90%]  md:h-24 h-full gap-4  bg-white shadow-2xl mx-auto -translate-y-16 -z-50">
+      <div className="col-span-1 mx-auto ">
         <input
           placeholder="Full Name"
           type="text"
-          className="p-2 w-56 border md:my-12 mx-4 mt-10"
+          className="p-2 w-56 border md:my-6 mx-4 mt-"
         />
       </div>
       <div className="col-span-1 mx-auto">
         <input
           placeholder="Email"
           type="email"
-          className="p-2 w-56 border md:my-12 mx-4"
+          className="p-2 w-56 border md:my-6 mx-4"
         />
       </div>
       <div className="col-span-1 mx-auto">
         <input
           placeholder="From"
           type="date"
-          className="p-2 w-56 border md:my-12 mx-4"
+          className="p-2 w-56 border md:my-6 mx-4"
         />
       </div>
       <div className="col-span-1 mx-auto">
         <input
           placeholder="To"
           type="date"
-          className="p-2 w-56 border md:my-12 mx-4"
+          className="p-2 w-56 border md:my-6 mx-4"
         />
       </div>
-      <div className="col-span-1 mx-auto my-12">
-        <div className="  p-2 px-4">
+      <div className="col-span-1 mx-auto my-6 ">
+        <div className="  p-2 px-4 ">
           <Link
             type="submit"
             href={"/"}

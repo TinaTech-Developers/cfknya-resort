@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { FaBed, FaStar, FaToiletPaper, FaWifi } from "react-icons/fa";
+import { GiFireplace, GiToaster } from "react-icons/gi";
 import {
   MdBathtub,
   MdElectricalServices,
@@ -158,9 +159,10 @@ export default function RoomCard({ room }) {
               className="h-[25rem] w-full object-cover"
             />
           </SwiperSlide>
+
           <SwiperSlide>
             <Image
-              src={room.imageUrl}
+              src={room.image3}
               alt="room image"
               height={400}
               width={400}
@@ -176,7 +178,9 @@ export default function RoomCard({ room }) {
         <div className="grid grid-cols-1 md:grid-cols-3 mx-5">
           <div className="col-span-1 flex flex-col items-start justify-between pr-4">
             <h1 className="uppercase text-xl mb-4">{room.name}</h1>{" "}
-            <p className="pb-4  w-full text-sm">{room.description}</p>
+            <p className="pb-4  w-full text-sm font-normal">
+              {room.description}
+            </p>
             <Link
               key={room._id}
               href={`/rooms/${room._id}`}
@@ -185,18 +189,19 @@ export default function RoomCard({ room }) {
               View Details
             </Link>
           </div>
+
           <div className="col-span-1 md:col-span-2 md:ml-4">
             <h1 className="uppercase text-xl mb-4">Apartment Facilities</h1>{" "}
-            <div className="grid grid-cols-1 md:grid-cols-2 text-sm">
+            <div className="grid grid-cols-1 md:grid-cols-2 text-sm font-normal">
               <div className="col-span-1 flex flex-col items-start justify-between my- gap-4 ">
                 <div className="flex items-center justify-center gap-1">
-                  <FaBed size={20} /> 2 Bed
+                  <FaBed size={20} /> {room.roomType} Bed
                 </div>
                 <div className="flex items-center justify-center gap-1">
                   <LucideTv2 size={20} /> Flat Screen TV
                 </div>
                 <div className="flex items-center justify-center gap-1">
-                  <MdElectricalServices size={20} /> Power Points
+                  <GiToaster size={20} /> Braai Area
                 </div>{" "}
                 <div className="flex items-center justify-center gap-1">
                   <MdOutlineAirlineSeatReclineExtra size={20} /> Sitting Area
@@ -212,6 +217,9 @@ export default function RoomCard({ room }) {
                   </div>
                   <div className="flex items-center justify-center gap-1">
                     <FaWifi size={20} /> Free WiFi
+                  </div>
+                  <div className="flex items-center justify-center gap-1">
+                    <GiFireplace size={20} /> Fire Place
                   </div>
                 </div>
               </div>

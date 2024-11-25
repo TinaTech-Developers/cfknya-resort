@@ -45,6 +45,9 @@ function EditRoomDetails({
   imageUrl,
   description,
   priceNumber,
+  image1,
+  image2,
+  image3,
 }) {
   // const API_BASE_URL =
   //   process.env.API_BASE_URL ||
@@ -224,7 +227,7 @@ function EditRoomDetails({
             </SwiperSlide>
             <SwiperSlide>
               <Image
-                src={imageUrl}
+                src={image1}
                 alt="room image"
                 height={400}
                 width={400}
@@ -233,7 +236,7 @@ function EditRoomDetails({
             </SwiperSlide>
             <SwiperSlide>
               <Image
-                src={imageUrl}
+                src={image2}
                 alt="room image"
                 height={400}
                 width={400}
@@ -242,7 +245,7 @@ function EditRoomDetails({
             </SwiperSlide>
             <SwiperSlide>
               <Image
-                src={imageUrl}
+                src={image3}
                 alt="room image"
                 height={400}
                 width={400}
@@ -264,13 +267,11 @@ function EditRoomDetails({
             <h1 className="text-2xl font-semibold capitalize">
               Room description
             </h1>
-            <p>
-              {price} | {adjustedPrice}
-            </p>
-            <p className="text-gray-500">{description}</p>
+            <p>{name}</p>
+            <p className="text-gray-500 font-normal">{description}</p>
             <hr className="my-4" />
-            <div>
-              <h2 className="text-xl">About room</h2>
+            <div className="font-normal">
+              <h2 className="text-xl font-normal">About room</h2>
 
               <div className="grid grid-cols-3 mt-5">
                 <div className="col-span-1 flex items-center justify-start gap-1">
@@ -286,8 +287,8 @@ function EditRoomDetails({
             </div>
             <hr className="my-4" />
 
-            <div className="text-sm">
-              <h1 className="my-4 font-bold">Notes</h1>
+            <div className="text-sm font-normal">
+              <h1 className="my-4 font-bold ">Notes</h1>
               <div className="text-sm">
                 <h2 className="font-semibold">Inclusions</h2>
                 <p className="text-xs">
@@ -500,9 +501,9 @@ function EditRoomDetails({
             </button>
             <ToastContainer />
           </form>
-          <p className="text-center text-sm text-gray-600 ">
+          <p className="text-center text-sm font-normal text-gray-600 ">
             {
-              "By submitting this booking, you agree to the cfknyaresort.co.zw/terms' "
+              "By submitting this booking, you agree to the Novu Resort Terms & Conditions' "
             }
             <span className="text-red-700">Terms & Conditions</span>
           </p>

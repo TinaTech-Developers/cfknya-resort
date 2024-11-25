@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function About() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 bg-white">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:-mt-16 bg-white">
       <div className="col-span-1 px-10">
         <motion.div
           initial={{ y: -100, opacity: 0 }}
@@ -18,7 +18,7 @@ function About() {
             <div className="w-10 h-1 bg-amber-700"></div>
           </div>
 
-          <h1 className="text-2xl md:text-4xl font-bold text-green-950">
+          <h1 className="text-2xl md:text-4xl font-mono text-green-950">
             Stay and Enjoy
           </h1>
         </motion.div>
@@ -27,7 +27,7 @@ function About() {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.7 }}
         >
-          <p className="text-black">
+          <p className="text-black font-normal">
             {" "}
             Welcome to Novu Resort, your ultimate destination for relaxation and
             rejuvenation. Nestled amidst the serene landscapes and breathtaking

@@ -10,7 +10,7 @@ function Gallery() {
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7 }}
-        className="text-4xl font-bold text-center"
+        className="text-2xl md:text-4xl font-nono text-center"
       >
         <div className="flex items-center justify-center gap-2 my-4">
           <div className="w-10 h-1 bg-amber-700"></div>

@@ -26,8 +26,17 @@ const getRoomById = async (id) => {
 export default async function RoomDetails({ params }) {
   const { id } = params;
   const { room } = await getRoomById(id);
-  const { imageUrl, price, name, description, adjustedPrice, priceNumber } =
-    room;
+  const {
+    imageUrl,
+    price,
+    name,
+    description,
+    adjustedPrice,
+    priceNumber,
+    image1,
+    image2,
+    image3,
+  } = room;
 
   return (
     <Layout>
@@ -39,6 +48,9 @@ export default async function RoomDetails({ params }) {
         price={price}
         adjustedPrice={adjustedPrice}
         priceNumber={priceNumber}
+        image1={image1}
+        image2={image2}
+        image3={image3}
       />
     </Layout>
   );

@@ -32,7 +32,7 @@ function ExploreRooms({ heading }) {
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.7 }}
-        className="text-4xl font-bold text-center md:mb-12"
+        className="text-2xl md:text-4xl font-nono text-center md:mb-12"
       >
         <div className="flex items-center justify-center gap-2 my-4">
           <div className="w-10 h-1 bg-amber-700"></div>

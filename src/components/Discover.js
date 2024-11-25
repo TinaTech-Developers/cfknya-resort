@@ -10,8 +10,8 @@ function Discover() {
           <h1 className="text-lg  uppercase text-amber-700">our rooms</h1>
           <div className="w-10 h-1 bg-orange-700"></div>
         </div>
-        <p className="text-3xl font-bold">Discover A Brand Luxurious Resort</p>
-        <p className="my-10">
+        <p className="text-3xl font-">Discover A Brand Luxurious Resort</p>
+        <p className="my-10 font-normal">
           Step into a world of elegance at our brand new luxurious resort. Enjoy
           stunning accommodations, top-notch amenities, and exceptional service
           designed for your comfort and relaxation.

@@ -64,7 +64,7 @@ function page() {
           <Images image={"/img_10.jpg"} name={""} />
         </SwiperSlide>
         <SwiperSlide>
-          <Images image={"/img_13.jpg"} />
+          <Images image={"/img_13.jpeg"} />
         </SwiperSlide>
       </Swiper>
       <div className="m-10 md:mx-20">
