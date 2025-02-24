@@ -31,7 +31,7 @@ export default function Hero() {
             text={"Welcome To Our Luxury Villas"}
             text1={"Click The Button Below for Bookings"}
           />
-          <Inquiry />
+          
         </SwiperSlide>
         <SwiperSlide>
           <HeroCard
@@ -39,12 +39,12 @@ export default function Hero() {
             text={"Welcome To Our Luxury Villas"}
             text1={"Click The Button Below for Bookings"}
           />
-          <Inquiry />
+          
         </SwiperSlide>
 
         <SwiperSlide>
           <HeroCard1 head={"Novu Resort"} text1={"Restaurant | Conferrence"} />
-          <Inquiry />
+        
         </SwiperSlide>
       </Swiper>
     </>
