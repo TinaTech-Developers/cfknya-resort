@@ -21,7 +21,7 @@ function Navbar() {
         {/* <Link href={"/"} className="text-3xl font-bold text-green-900">
           {/* NOVU RESORT 
         </Link> */}
-        <div className="w-[70px] h-16 mb-2">
+        <div className="w-[100px] h-16 mb-2">
           <Image
             src={"https://5puqigze8f.ufs.sh/f/M8crfG3am8lfrPENUKmBK8DQxoItvOhfy4Fwj5PGce1Nqkul"}
             alt=""
