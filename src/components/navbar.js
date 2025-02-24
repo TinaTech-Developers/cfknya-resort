@@ -23,7 +23,7 @@ function Navbar() {
         </Link> */}
         <div className="w-[70px] h-16 mb-2">
           <Image
-            src={"/logo1.png"}
+            src={"https://5puqigze8f.ufs.sh/f/M8crfG3am8lfrPENUKmBK8DQxoItvOhfy4Fwj5PGce1Nqkul"}
             alt=""
             height={200}
             width={150}
